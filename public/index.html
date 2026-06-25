@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>CHI â€” Project Dashboard</title>
+  <title>CHI — Project Dashboard</title>
   <link
     href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=DM+Mono:wght@400;500&display=swap"
     rel="stylesheet">
@@ -1833,7 +1833,7 @@
       <button class="tnb" id="tnb-admin" onclick="switchView('admin',this)" style="display:none;">Admin</button>
     </div>
     <div class="tbr">
-      <span class="wkp">Week 17 â€” Apr 2026</span>
+      <span class="wkp">Week 17 — Apr 2026</span>
       <div class="eas">
         <span>Editing as</span>
         <select id="edsel" onchange="currentEditor=this.value; recomputeManager(); if(document.getElementById('view-checkin').classList.contains('active')) checkCiLock();">
@@ -1848,19 +1848,19 @@
       <div class="sbs">
         <div class="sbl">Project status</div>
         <div class="sbr"><span class="sbrl"><span class="sd" style="background:var(--gn)"></span>On track</span><span id="cnt-green"
-            class="sbrv" style="color:var(--gn)">â€”</span></div>
+            class="sbrv" style="color:var(--gn)">—</span></div>
         <div class="sbr"><span class="sbrl"><span class="sd" style="background:var(--am)"></span>Needs
-            discussion</span><span id="cnt-amber" class="sbrv" style="color:var(--am)">â€”</span></div>
+            discussion</span><span id="cnt-amber" class="sbrv" style="color:var(--am)">—</span></div>
         <div class="sbr"><span class="sbrl"><span class="sd" style="background:var(--rd)"></span>Urgent</span><span id="cnt-red"
-            class="sbrv" style="color:var(--rd)">â€”</span></div>
+            class="sbrv" style="color:var(--rd)">—</span></div>
         <div class="sbr"><span class="sbrl"><span class="sd" style="background:var(--dm)"></span>Dormant</span><span id="cnt-dormant"
-            class="sbrv" style="color:var(--dm)">â€”</span></div>
+            class="sbrv" style="color:var(--dm)">—</span></div>
       </div>
       <div class="sbdiv"></div>
       <div class="sbs">
         <div class="sbl">Hours</div>
-        <div class="sbr"><span class="sbrl">This week</span><span id="sb-week-h" class="sbrv">â€”</span></div>
-        <div class="sbr"><span class="sbrl">This month</span><span id="sb-mo-h" class="sbrv">â€”</span></div>
+        <div class="sbr"><span class="sbrl">This week</span><span id="sb-week-h" class="sbrv">—</span></div>
+        <div class="sbr"><span class="sbrl">This month</span><span id="sb-mo-h" class="sbrv">—</span></div>
       </div>
       <div class="sbdiv"></div>
       <div class="sbs" style="padding-bottom:4px;">
@@ -1907,7 +1907,7 @@
             <div class="tlc">
               <span style="font-size:12px;color:var(--mu);">Zoom:</span>
               <div class="tlzoom">
-                <button class="tlzb" onclick="zoomTl(-1)">âˆ’</button>
+                <button class="tlzb" onclick="zoomTl(-1)">−</button>
                 <span id="tlzlbl" style="font-size:12px;color:var(--mu);min-width:40px;text-align:center;">10wk</span>
                 <button class="tlzb" onclick="zoomTl(1)">+</button>
               </div>
@@ -1953,7 +1953,7 @@
               <div class="agenda-head" onclick="toggleAgenda()">
                 <span class="agenda-title">Pre-meeting agenda</span>
                 <span class="agenda-count" id="agenda-count">3 items</span>
-                <span id="agenda-chev" style="font-size:10px;color:var(--fa);">â–¾</span>
+                <span id="agenda-chev" style="font-size:10px;color:var(--fa);">▾</span>
               </div>
               <div class="agenda-body open" id="agenda-body"></div>
             </div>
@@ -1976,9 +1976,9 @@
         <div class="ciw">
           <div class="cii">
             <div class="cim">
-              <button class="cimb active" onclick="selMode('c',this)">Contributor check-in<div class="cims">Friday EOD Â·
+              <button class="cimb active" onclick="selMode('c',this)">Contributor check-in<div class="cims">Friday EOD ·
                   ~5 min</div></button>
-              <button class="cimb" onclick="selMode('pm',this)">PM check-in<div class="cims">Monday EOD Â· per project
+              <button class="cimb" onclick="selMode('pm',this)">PM check-in<div class="cims">Monday EOD · per project
                 </div></button>
               <button class="cimb" onclick="selMode('po',this)">PO / Tuesday prep<div class="cims">Before Tuesday
                   meeting</div></button>
@@ -2017,55 +2017,55 @@
 
     let PROJECTS = [
       { id: 1, name: 'CABKA Project', phase: 'Planning', goal: 'Complete phase 1 technical setup', goalApproved: true, weekStatus: 'Kick-off done. VM setup in progress.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Maceo G.', r: 'C' }], weekH: 12, moH: 44, proposed: false, dormant: false, color: '#4a8c2a', tl: [.1, .75], marks: [{ l: 'Phase 1 end', t: 'm', d: '2026-05-10' }, { l: 'Handover', t: 'd', d: '2026-06-15' }] },
-      { id: 2, name: 'HI Industry Partner Survey', phase: 'Analysis', goal: 'Talk to contact persons, go through reports', goalApproved: true, weekStatus: 'Frederik meeting contact persons. Two reports reviewed.', status: 'green', celebrate: 'We got all 8 partners to respond â€” fastest turnaround yet!', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Alexis V.', r: 'C' }, { n: 'LÃ¦rke T.', r: 'C' }], weekH: 6, moH: 22, proposed: false, dormant: false, color: '#1D9E75', tl: [.05, .6], marks: [{ l: 'Report deadline', t: 'd', d: '2026-05-30' }] },
-      { id: 3, name: 'KogniKit KU', phase: 'Development', goal: 'Finish data analysis, decouple game instances', goalApproved: true, weekStatus: 'SÃ¡ra vibe-coding new games. Decoupling in progress.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Blanka SzÃ¶llÃ¶si', r: 'PM' }], contrib: [{ n: 'Abel N.', r: 'C' }, { n: 'Thomas H.', r: 'C' }], weekH: 10, moH: 38, proposed: false, dormant: false, color: '#7F77DD', tl: [0, .65], marks: [{ l: 'Pipeline done', t: 'm', d: '2026-04-30' }] },
+      { id: 2, name: 'HI Industry Partner Survey', phase: 'Analysis', goal: 'Talk to contact persons, go through reports', goalApproved: true, weekStatus: 'Frederik meeting contact persons. Two reports reviewed.', status: 'green', celebrate: 'We got all 8 partners to respond — fastest turnaround yet!', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Alexis V.', r: 'C' }, { n: 'Lærke T.', r: 'C' }], weekH: 6, moH: 22, proposed: false, dormant: false, color: '#1D9E75', tl: [.05, .6], marks: [{ l: 'Report deadline', t: 'd', d: '2026-05-30' }] },
+      { id: 3, name: 'KogniKit KU', phase: 'Development', goal: 'Finish data analysis, decouple game instances', goalApproved: true, weekStatus: 'Sára vibe-coding new games. Decoupling in progress.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Blanka Szöllösi', r: 'PM' }], contrib: [{ n: 'Abel N.', r: 'C' }, { n: 'Thomas H.', r: 'C' }], weekH: 10, moH: 38, proposed: false, dormant: false, color: '#7F77DD', tl: [0, .65], marks: [{ l: 'Pipeline done', t: 'm', d: '2026-04-30' }] },
       { id: 4, name: 'Quantum readiness chatbot', phase: 'Development', goal: 'Ship internal dev build for review', goalApproved: true, weekStatus: 'Alexander and Chloe aligning on architecture.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Eleni Karydi', r: 'PM' }], contrib: [{ n: 'Alexander V.', r: 'C' }, { n: 'Chloe L.', r: 'C' }], weekH: 8, moH: 30, proposed: false, dormant: false, color: '#378ADD', tl: [.2, .7], marks: [{ l: 'Internal review', t: 'm', d: '2026-05-15' }] },
       { id: 5, name: 'Quantum Strategies Chatbot', phase: 'Development', goal: 'Complete content integration', goalApproved: true, weekStatus: '', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Eleni Karydi', r: 'PM' }], contrib: [{ n: 'Chloe L.', r: 'C' }], weekH: 5, moH: 18, proposed: false, dormant: false, color: '#1D9E75', tl: [.25, .72], marks: [] },
       { id: 6, name: 'Quantum Student Chatbot', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'green', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 3, moH: 10, proposed: false, dormant: false, color: '#5DCAA5', tl: [.3, .75], marks: [] },
-      { id: 7, name: 'Tech Circle Innovation', phase: 'Research', goal: 'Prepare interview guide, run first interviews', goalApproved: true, weekStatus: 'Janet presenting at HHAI. TechCircle interview this week.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten RÃ¸ndal', r: 'PM' }], contrib: [{ n: 'Frederik K.', r: 'C' }, { n: 'LÃ¦rke T.', r: 'C' }, { n: 'Casper T.', r: 'C' }, { n: 'Alexander V.', r: 'C' }], weekH: 7, moH: 24, proposed: false, dormant: false, color: '#b07010', tl: [.1, .8], marks: [{ l: 'Report draft', t: 'm', d: '2026-06-01' }] },
-      { id: 8, name: 'Operations Task Force', phase: 'Internal', goal: 'Employee handbook with SOPs before summer', goalApproved: true, weekStatus: 'Handbook structure drafted. SOPs in progress.', status: 'green', celebrate: '', decision: 'Need Jacob to approve the new onboarding SOP before it goes to the team.', po: [{ n: 'Morten RÃ¸ndal', r: 'PO' }], pm: [{ n: 'Morten RÃ¸ndal', r: 'PM' }], contrib: [{ n: 'Blanka S.', r: 'C' }, { n: 'Frederik K.', r: 'C' }, { n: 'Mille B.', r: 'C' }], weekH: 4, moH: 14, proposed: false, dormant: false, color: '#909090', tl: [0, .55], marks: [{ l: 'Handbook done', t: 'd', d: '2026-06-30' }] },
-      { id: 9, name: 'CHI Chatbot Standardization', phase: 'Scoping', goal: 'Present dev roadmap to Jacob for approval', goalApproved: true, weekStatus: 'Dev roadmap being drafted.', status: 'amber', celebrate: '', decision: 'Need Jacob to block time to review the roadmap before end of April.', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Morten RÃ¸ndal', r: 'PO' }], pm: [{ n: 'Alexander Velev', r: 'PM' }], contrib: [], weekH: 2, moH: 6, proposed: false, dormant: false, color: '#EF9F27', tl: [.28, .58], marks: [{ l: 'Roadmap presented', t: 'd', d: '2026-04-30' }] },
-      { id: 10, name: 'CHI In-house RAG', phase: 'Dev â€” custom GPT', goal: '20 queries evaluated by CHI staff', goalApproved: false, weekStatus: '20 queries to evaluate by CHI staff.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Morten RÃ¸ndal', r: 'PO' }], pm: [{ n: 'Casper ThylkjÃ¦r', r: 'PM' }], contrib: [{ n: 'Alexander V.', r: 'C' }], weekH: 6, moH: 20, proposed: false, dormant: false, color: '#EF9F27', tl: [.22, .62], marks: [{ l: 'Eval complete', t: 'd', d: '2026-05-07' }] },
-      { id: 11, name: 'CrowdThinking Festivals', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten RÃ¸ndal', r: 'PM' }], contrib: [{ n: 'Carina G.', r: 'C' }, { n: 'LÃ¦rke T.', r: 'C' }, { n: 'Blanka S.', r: 'I' }], weekH: 4, moH: 14, proposed: false, dormant: false, color: '#EF9F27', tl: [.15, .85], marks: [] },
+      { id: 7, name: 'Tech Circle Innovation', phase: 'Research', goal: 'Prepare interview guide, run first interviews', goalApproved: true, weekStatus: 'Janet presenting at HHAI. TechCircle interview this week.', status: 'green', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten Røndal', r: 'PM' }], contrib: [{ n: 'Frederik K.', r: 'C' }, { n: 'Lærke T.', r: 'C' }, { n: 'Casper T.', r: 'C' }, { n: 'Alexander V.', r: 'C' }], weekH: 7, moH: 24, proposed: false, dormant: false, color: '#b07010', tl: [.1, .8], marks: [{ l: 'Report draft', t: 'm', d: '2026-06-01' }] },
+      { id: 8, name: 'Operations Task Force', phase: 'Internal', goal: 'Employee handbook with SOPs before summer', goalApproved: true, weekStatus: 'Handbook structure drafted. SOPs in progress.', status: 'green', celebrate: '', decision: 'Need Jacob to approve the new onboarding SOP before it goes to the team.', po: [{ n: 'Morten Røndal', r: 'PO' }], pm: [{ n: 'Morten Røndal', r: 'PM' }], contrib: [{ n: 'Blanka S.', r: 'C' }, { n: 'Frederik K.', r: 'C' }, { n: 'Mille B.', r: 'C' }], weekH: 4, moH: 14, proposed: false, dormant: false, color: '#909090', tl: [0, .55], marks: [{ l: 'Handbook done', t: 'd', d: '2026-06-30' }] },
+      { id: 9, name: 'CHI Chatbot Standardization', phase: 'Scoping', goal: 'Present dev roadmap to Jacob for approval', goalApproved: true, weekStatus: 'Dev roadmap being drafted.', status: 'amber', celebrate: '', decision: 'Need Jacob to block time to review the roadmap before end of April.', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Morten Røndal', r: 'PO' }], pm: [{ n: 'Alexander Velev', r: 'PM' }], contrib: [], weekH: 2, moH: 6, proposed: false, dormant: false, color: '#EF9F27', tl: [.28, .58], marks: [{ l: 'Roadmap presented', t: 'd', d: '2026-04-30' }] },
+      { id: 10, name: 'CHI In-house RAG', phase: 'Dev — custom GPT', goal: '20 queries evaluated by CHI staff', goalApproved: false, weekStatus: '20 queries to evaluate by CHI staff.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Morten Røndal', r: 'PO' }], pm: [{ n: 'Casper Thylkjær', r: 'PM' }], contrib: [{ n: 'Alexander V.', r: 'C' }], weekH: 6, moH: 20, proposed: false, dormant: false, color: '#EF9F27', tl: [.22, .62], marks: [{ l: 'Eval complete', t: 'd', d: '2026-05-07' }] },
+      { id: 11, name: 'CrowdThinking Festivals', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten Røndal', r: 'PM' }], contrib: [{ n: 'Carina G.', r: 'C' }, { n: 'Lærke T.', r: 'C' }, { n: 'Blanka S.', r: 'I' }], weekH: 4, moH: 14, proposed: false, dormant: false, color: '#EF9F27', tl: [.15, .85], marks: [] },
       { id: 12, name: 'DigiQ tech infrastructure', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Eleni Karydi', r: 'PM' }], contrib: [{ n: 'Thomas H.', r: 'C' }], weekH: 3, moH: 10, proposed: false, dormant: false, color: '#EF9F27', tl: [.3, .9], marks: [] },
       { id: 13, name: 'ESG Project', phase: '', goal: '3 page abstract 17/4', goalApproved: true, weekStatus: '3 page abstract submitted.', status: 'amber', celebrate: 'Abstract submitted on time!', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }, { n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [], weekH: 2, moH: 7, proposed: false, dormant: false, color: '#EF9F27', tl: [.25, .5], marks: [{ l: 'Abstract', t: 'd', d: '2026-04-17' }] },
-      { id: 14, name: 'FERC bot', phase: '', goal: 'Two page abstract â€” conference in May', goalApproved: true, weekStatus: 'Abstract mid April. Conference in May.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Mille B.', r: 'C' }], weekH: 5, moH: 16, proposed: false, dormant: false, color: '#EF9F27', tl: [.2, .65], marks: [{ l: 'Abstract', t: 'd', d: '2026-04-20' }, { l: 'Conference', t: 'm', d: '2026-05-20' }] },
-      { id: 15, name: 'GenAI Box w. Bagger SÃ¸rensen', phase: 'Developing', goal: 'Test at Flexwind in May', goalApproved: true, weekStatus: 'Test at Flexwind May.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Alexis V.', r: 'C' }], weekH: 5, moH: 18, proposed: false, dormant: false, color: '#EF9F27', tl: [.15, .65], marks: [{ l: 'Flexwind test', t: 'm', d: '2026-05-22' }] },
+      { id: 14, name: 'FERC bot', phase: '', goal: 'Two page abstract — conference in May', goalApproved: true, weekStatus: 'Abstract mid April. Conference in May.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Mille B.', r: 'C' }], weekH: 5, moH: 16, proposed: false, dormant: false, color: '#EF9F27', tl: [.2, .65], marks: [{ l: 'Abstract', t: 'd', d: '2026-04-20' }, { l: 'Conference', t: 'm', d: '2026-05-20' }] },
+      { id: 15, name: 'GenAI Box w. Bagger Sørensen', phase: 'Developing', goal: 'Test at Flexwind in May', goalApproved: true, weekStatus: 'Test at Flexwind May.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Alexis V.', r: 'C' }], weekH: 5, moH: 18, proposed: false, dormant: false, color: '#EF9F27', tl: [.15, .65], marks: [{ l: 'Flexwind test', t: 'm', d: '2026-05-22' }] },
       { id: 16, name: 'HI Consultance Interface', phase: 'Scoping', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 1, moH: 3, proposed: false, dormant: false, color: '#EF9F27', tl: [.35, .75], marks: [] },
-      { id: 17, name: 'HI Manifesto', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Morten RÃ¸ndal', r: 'PM' }], contrib: [{ n: 'Daniel L.', r: 'C' }, { n: 'Frederik K.', r: 'C' }], weekH: 0, moH: 0, proposed: false, dormant: false, color: '#EF9F27', tl: [0, .9], marks: [] },
+      { id: 17, name: 'HI Manifesto', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Morten Røndal', r: 'PM' }], contrib: [{ n: 'Daniel L.', r: 'C' }, { n: 'Frederik K.', r: 'C' }], weekH: 0, moH: 0, proposed: false, dormant: false, color: '#EF9F27', tl: [0, .9], marks: [] },
       { id: 18, name: 'Internal GenAI Box', phase: 'Research + dev', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 2, moH: 8, proposed: false, dormant: false, color: '#EF9F27', tl: [.2, .8], marks: [] },
-      { id: 19, name: 'KogniKit AU', phase: '', goal: 'End of month: have something to see and test', goalApproved: false, weekStatus: 'End of month have something to see and test.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Blanka SzÃ¶llÃ¶si', r: 'PM' }], contrib: [{ n: 'LÃ¦rke T.', r: 'C' }, { n: 'SÃ¡ra S.', r: 'C' }], weekH: 6, moH: 20, proposed: false, dormant: false, color: '#EF9F27', tl: [.18, .7], marks: [{ l: 'Demo ready', t: 'd', d: '2026-04-30' }] },
+      { id: 19, name: 'KogniKit AU', phase: '', goal: 'End of month: have something to see and test', goalApproved: false, weekStatus: 'End of month have something to see and test.', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Jacob Sherson', r: 'PO' }], pm: [{ n: 'Blanka Szöllösi', r: 'PM' }], contrib: [{ n: 'Lærke T.', r: 'C' }, { n: 'Sára S.', r: 'C' }], weekH: 6, moH: 20, proposed: false, dormant: false, color: '#EF9F27', tl: [.18, .7], marks: [{ l: 'Demo ready', t: 'd', d: '2026-04-30' }] },
       { id: 20, name: 'Quantum HR Workflow', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 2, moH: 7, proposed: false, dormant: false, color: '#EF9F27', tl: [.25, .7], marks: [] },
       { id: 21, name: 'Quantum Jobs', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'amber', celebrate: '', decision: '', po: [{ n: 'Eleni Karydi', r: 'PO' }], pm: [], contrib: [], weekH: 3, moH: 10, proposed: false, dormant: false, color: '#EF9F27', tl: [.2, .85], marks: [] },
       { id: 22, name: 'AU Connect grant', phase: 'Waiting on answer', goal: 'Get funding, make plan forward', goalApproved: true, weekStatus: 'Application sent. Waiting.', status: 'red', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 5, moH: 14, proposed: false, dormant: true, color: '#c0392b', tl: [.1, .55], marks: [{ l: 'Submission', t: 'd', d: '2026-04-14' }] },
-      { id: 23, name: 'Innobooster', phase: '', goal: '', goalApproved: false, weekStatus: 'Idle.', status: 'gray', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten RÃ¸ndal', r: 'PM' }], contrib: [], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .5], marks: [] },
+      { id: 23, name: 'Innobooster', phase: '', goal: '', goalApproved: false, weekStatus: 'Idle.', status: 'gray', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Morten Røndal', r: 'PM' }], contrib: [], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .5], marks: [] },
       { id: 24, name: 'Innovation Management Project', phase: 'Finished?', goal: '', goalApproved: false, weekStatus: '', status: 'gray', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [], contrib: [{ n: 'Chloe L.', r: 'C' }], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .35], marks: [] },
       { id: 25, name: 'Metacognition Lab study', phase: 'Delivered', goal: 'Move to new architecture?', goalApproved: false, weekStatus: 'Project as good as done. Demo video left.', status: 'gray', celebrate: '', decision: '', po: [{ n: 'Janet Rafner', r: 'PO' }], pm: [{ n: 'Frederik Kjeldsen', r: 'PM' }], contrib: [{ n: 'Mille B.', r: 'C' }], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .3], marks: [] },
       { id: 26, name: 'Quantum Dashboard', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'gray', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .4], marks: [] },
-      { id: 27, name: 'RingkÃ¸bing Skjern Collab', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'gray', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .4], marks: [] },
+      { id: 27, name: 'Ringkøbing Skjern Collab', phase: '', goal: '', goalApproved: false, weekStatus: '', status: 'gray', celebrate: '', decision: '', po: [], pm: [], contrib: [], weekH: 0, moH: 0, proposed: false, dormant: true, color: '#c0bfba', tl: [0, .4], marks: [] },
     ];
 
     let PEOPLE = [
-      { name: 'Jacob Sherson', ini: 'JS', role: 'po', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, false, false], Thu: [true, true, false], Fri: [true, false, false] }, projs: [], poNote: 'Heads down on grant strategy this week. Available for urgent decisions via Basecamp ping.', pmNote: '', leadership: '' },
-      { name: 'Janet Rafner', ini: 'JR', role: 'po', avail: 'red', availTxt: 'Overloaded (âˆ’3h)', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ¤¯', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [false, false, false], Thu: [true, true, true], Fri: [false, false, false] }, projs: [], poNote: 'Deep in HHAI follow-ups. Lots of new connections to bring back. Supervising masters students this week â€” Basecamp ping is best if you need me.', pmNote: '', leadership: '' },
+      { name: 'Jacob Sherson', ini: 'JS', role: 'po', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, false, false], Thu: [true, true, false], Fri: [true, false, false] }, projs: [], poNote: 'Heads down on grant strategy this week. Available for urgent decisions via Basecamp ping.', pmNote: '', leadership: '' },
+      { name: 'Janet Rafner', ini: 'JR', role: 'po', avail: 'red', availTxt: 'Overloaded (−3h)', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: '🤯', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [false, false, false], Thu: [true, true, true], Fri: [false, false, false] }, projs: [], poNote: 'Deep in HHAI follow-ups. Lots of new connections to bring back. Supervising masters students this week — Basecamp ping is best if you need me.', pmNote: '', leadership: '' },
       { name: 'Simon Goorney', ini: 'SG', role: 'po', avail: 'green', availTxt: 'Open (4h)', totalH: 37, availH: 4, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, true, false], Tue: [true, true, false], Wed: [true, true, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Frederik BrosbÃ¸l Kjeldsen', ini: 'FK', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, true, false], Thu: [true, true, false], Fri: [true, false, false] }, projs: [{ p: 'CABKA Project', h: 4, note: 'Stakeholder updates', nextH: 4 }, { p: 'ESG Project', h: 3, note: 'Abstract submitted!', nextH: 3 }], poNote: '', pmNote: 'ESG abstract was submitted on time, great team effort.', leadership: 'A company called Byforma reached out about HI workshops. Might be worth scoping â€” could be a new client.' },
-      { name: 'Morten RÃ¸ndal Olsen', ini: 'MR', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 18, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [true, true, true], Tue: [true, true, false], Wed: [true, true, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'CHI In-house RAG', h: 3, note: 'Strategic oversight', nextH: 2 }, { p: 'Operations Task Force', h: 4, note: 'Handbook coordination', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Thomas Halgaard', ini: 'TH', role: 'pm', avail: 'green', availTxt: 'Open (4h)', totalH: 37, availH: 4, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [true, true, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 4, note: 'Game UI work', nextH: 4 }, { p: 'DigiQ tech infrastructure', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Bianka SzÃ¶llÃ¶si', ini: 'BS', role: 'pm', avail: 'green', availTxt: 'Open â€” projects (6h)', totalH: 37, availH: 6, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 5, note: '', nextH: 5 }, { p: 'Operations Task Force', h: 2, note: '', nextH: 2 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Eleni Karydi', ini: 'EK', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [true, true, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum readiness chatbot', h: 5, note: 'Architecture review', nextH: 5 }, { p: 'DigiQ tech infrastructure', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Casper ThylkjÃ¦r', ini: 'CT', role: 'pm', avail: 'amber', availTxt: 'Open â€” small tasks (4h)', totalH: 15, availH: 4, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'CHI In-house RAG', h: 6, note: 'New system prompt for RAG MVP, finished eval sheet', nextH: 4 }, { p: 'DS StÃ¥l deployment', h: 3, note: 'Live environment progress', nextH: 3 }], poNote: '', pmNote: 'Good momentum on the RAG this week.', leadership: 'Inbound request from Aarsleff about a potential collaboration. Not sure if this is a project or just a meeting.' },
-      { name: 'Abel Nagy', ini: 'AN', role: 'c', avail: 'green', availTxt: 'Open (3h)', totalH: 15, availH: 3, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 4, note: 'Data analysis tasks', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Alexander Velev', ini: 'AV', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [true, true, false], Tue: [false, false, false], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'CHI Chatbot Standardization', h: 4, note: 'Met Jacob, aligned next steps', nextH: 3 }, { p: 'Quantum readiness chatbot', h: 3, note: 'Dev work', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Alexis Vrielynck', ini: 'AV', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: 'âš¡', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum Jobs', h: 5, note: 'Quantum Jobs content, AI box work', nextH: 6 }, { p: 'GenAI Box w. Bagger SÃ¸rensen', h: 3, note: 'Langfuse integration', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Frederik Brosbøl Kjeldsen', ini: 'FK', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, true, false], Thu: [true, true, false], Fri: [true, false, false] }, projs: [{ p: 'CABKA Project', h: 4, note: 'Stakeholder updates', nextH: 4 }, { p: 'ESG Project', h: 3, note: 'Abstract submitted!', nextH: 3 }], poNote: '', pmNote: 'ESG abstract was submitted on time, great team effort.', leadership: 'A company called Byforma reached out about HI workshops. Might be worth scoping — could be a new client.' },
+      { name: 'Morten Røndal Olsen', ini: 'MR', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 18, availH: 0, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [true, true, true], Tue: [true, true, false], Wed: [true, true, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'CHI In-house RAG', h: 3, note: 'Strategic oversight', nextH: 2 }, { p: 'Operations Task Force', h: 4, note: 'Handbook coordination', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Thomas Halgaard', ini: 'TH', role: 'pm', avail: 'green', availTxt: 'Open (4h)', totalH: 37, availH: 4, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [true, true, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 4, note: 'Game UI work', nextH: 4 }, { p: 'DigiQ tech infrastructure', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Bianka Szöllösi', ini: 'BS', role: 'pm', avail: 'green', availTxt: 'Open — projects (6h)', totalH: 37, availH: 6, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 5, note: '', nextH: 5 }, { p: 'Operations Task Force', h: 2, note: '', nextH: 2 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Eleni Karydi', ini: 'EK', role: 'pm', avail: 'amber', availTxt: 'Not open', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [true, true, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum readiness chatbot', h: 5, note: 'Architecture review', nextH: 5 }, { p: 'DigiQ tech infrastructure', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Casper Thylkjær', ini: 'CT', role: 'pm', avail: 'amber', availTxt: 'Open — small tasks (4h)', totalH: 15, availH: 4, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'CHI In-house RAG', h: 6, note: 'New system prompt for RAG MVP, finished eval sheet', nextH: 4 }, { p: 'DS Stål deployment', h: 3, note: 'Live environment progress', nextH: 3 }], poNote: '', pmNote: 'Good momentum on the RAG this week.', leadership: 'Inbound request from Aarsleff about a potential collaboration. Not sure if this is a project or just a meeting.' },
+      { name: 'Abel Nagy', ini: 'AN', role: 'c', avail: 'green', availTxt: 'Open (3h)', totalH: 15, availH: 3, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [true, true, false], Tue: [true, false, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit KU', h: 4, note: 'Data analysis tasks', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Alexander Velev', ini: 'AV', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [true, true, false], Tue: [false, false, false], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'CHI Chatbot Standardization', h: 4, note: 'Met Jacob, aligned next steps', nextH: 3 }, { p: 'Quantum readiness chatbot', h: 3, note: 'Dev work', nextH: 4 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Alexis Vrielynck', ini: 'AV', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: '⚡', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum Jobs', h: 5, note: 'Quantum Jobs content, AI box work', nextH: 6 }, { p: 'GenAI Box w. Bagger Sørensen', h: 3, note: 'Langfuse integration', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
       { name: 'Antoine Poirier', ini: 'AP', role: 'c', avail: 'green', availTxt: 'Open (5h)', totalH: 37, availH: 5, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, true, false], Tue: [true, true, false], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Carina Gibat', ini: 'CG', role: 'c', avail: 'amber', availTxt: 'Open (2h)', totalH: 15, availH: 2, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'CrowdThinking Festivals', h: 3, note: 'Event planning', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Chloe Lucas', ini: 'CL', role: 'c', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum readiness chatbot', h: 5, note: 'Chatbot dev', nextH: 5 }, { p: 'Quantum Strategies Chatbot', h: 3, note: 'Content integration', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'Daniel Le', ini: 'DL', role: 'c', avail: 'green', availTxt: 'Open (4h)', totalH: 15, availH: 4, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [true, false, false], Tue: [true, true, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'HI Manifesto', h: 3, note: 'Content writing', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
-      { name: 'LÃ¦rke Thansen', ini: 'LT', role: 'c', avail: 'amber', availTxt: 'Open (2h)', totalH: 15, availH: 2, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, false, false], Tue: [false, false, false], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit AU', h: 4, note: '', nextH: 4 }, { p: 'CrowdThinking Festivals', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Carina Gibat', ini: 'CG', role: 'c', avail: 'amber', availTxt: 'Open (2h)', totalH: 15, availH: 2, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, false, false], Thu: [false, false, false], Fri: [false, false, false] }, projs: [{ p: 'CrowdThinking Festivals', h: 3, note: 'Event planning', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Chloe Lucas', ini: 'CL', role: 'c', avail: 'amber', availTxt: 'Not open', totalH: 37, availH: 0, submitted: true, inactive: false, emoji: '😐', schedule: { Mon: [true, true, false], Tue: [true, true, true], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'Quantum readiness chatbot', h: 5, note: 'Chatbot dev', nextH: 5 }, { p: 'Quantum Strategies Chatbot', h: 3, note: 'Content integration', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Daniel Le', ini: 'DL', role: 'c', avail: 'green', availTxt: 'Open (4h)', totalH: 15, availH: 4, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [true, false, false], Tue: [true, true, false], Wed: [false, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [{ p: 'HI Manifesto', h: 3, note: 'Content writing', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Lærke Thansen', ini: 'LT', role: 'c', avail: 'amber', availTxt: 'Open (2h)', totalH: 15, availH: 2, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, false, false], Tue: [false, false, false], Wed: [true, true, false], Thu: [true, false, false], Fri: [false, false, false] }, projs: [{ p: 'KogniKit AU', h: 4, note: '', nextH: 4 }, { p: 'CrowdThinking Festivals', h: 3, note: '', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
       { name: 'Mille Berg', ini: 'MB', role: 'c', avail: 'green', availTxt: 'Open (3h)', totalH: 15, availH: 3, submitted: false, inactive: false, emoji: '', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [false, false, false], Thu: [true, false, false], Fri: [true, true, false] }, projs: [{ p: 'FERC bot', h: 4, note: '', nextH: 4 }, { p: 'Operations Task Force', h: 2, note: '', nextH: 2 }], poNote: '', pmNote: '', leadership: '' },
       { name: 'Rigmor Lyck Hansen', ini: 'RL', role: 'c', avail: 'green', availTxt: 'Open (4h)', totalH: 15, availH: 4, submitted: false, inactive: false, emoji: '', schedule: { Mon: [true, true, false], Tue: [false, false, false], Wed: [true, false, false], Thu: [true, true, false], Fri: [false, false, false] }, projs: [], poNote: '', pmNote: '', leadership: '' },
-      { name: 'SÃ¡ra SzabÃ³', ini: 'SS', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: 'ðŸ˜Š', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, true, false], Thu: [false, false, false], Fri: [true, false, false] }, projs: [{ p: 'KogniKit KU', h: 5, note: 'Onboarded LÃ¦rke, vibe-coding new games', nextH: 6 }, { p: 'KogniKit AU', h: 3, note: 'Meeting coordination', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
+      { name: 'Sára Szabó', ini: 'SS', role: 'c', avail: 'amber', availTxt: 'Open (0h)', totalH: 15, availH: 0, submitted: true, inactive: false, emoji: '😊', schedule: { Mon: [false, false, false], Tue: [true, true, false], Wed: [true, true, false], Thu: [false, false, false], Fri: [true, false, false] }, projs: [{ p: 'KogniKit KU', h: 5, note: 'Onboarded Lærke, vibe-coding new games', nextH: 6 }, { p: 'KogniKit AU', h: 3, note: 'Meeting coordination', nextH: 3 }], poNote: '', pmNote: '', leadership: '' },
     ];
 
     function ini(n) { return n.split(/[\s.]+/).filter(Boolean).map(w => w[0].toUpperCase()).join('').slice(0, 2); }
@@ -2075,7 +2075,7 @@
       const tb = document.getElementById('ptbody'); tb.innerHTML = '';
       PROJECTS.forEach((p, i) => {
         const all = [...p.po, ...p.pm, ...p.contrib];
-        const avH = all.slice(0, 4).map((x, pi) => { const c = AVC[(i + pi) % AVC.length]; const rem = PEOPLE.find(pp => pp.name === x.n)?.inactive; return `<span class="av" style="background:${c.bg};color:${c.fg};${rem ? 'opacity:0.35;' : ''}" title="${x.n} â€” ${RLBL[x.r] || x.r}${rem ? ' (removed)' : ''}">${ini(x.n)}</span>`; }).join('');
+        const avH = all.slice(0, 4).map((x, pi) => { const c = AVC[(i + pi) % AVC.length]; const rem = PEOPLE.find(pp => pp.name === x.n)?.inactive; return `<span class="av" style="background:${c.bg};color:${c.fg};${rem ? 'opacity:0.35;' : ''}" title="${x.n} — ${RLBL[x.r] || x.r}${rem ? ' (removed)' : ''}">${ini(x.n)}</span>`; }).join('');
         const ex = all.length - 4;
         const exH = ex > 0 ? `<span class="av" style="background:var(--bg);color:var(--mu);font-size:9px;">+${ex}</span>` : '';
         const bw = Math.round(Math.min((p.weekH / Math.max(p.moH / 4.3, 1)) * 100, 100));
@@ -2084,12 +2084,12 @@
         if (p.proposed) bds.push(`<span class="bdg bdg-p">proposed</span>`);
         if (!p.dormant && !p.proposed && p.weekH === 0) bds.push(`<span class="bdg bdg-n">no activity</span>`);
         const gs = p.goal ? `<div class="ps">${p.goal}${!p.goalApproved && !p.dormant ? ` <span class="bdg bdg-pnd">goal pending</span>` : ''}</div>` : (!p.goalApproved && !p.dormant ? `<div style="margin-top:2px;"><span class="bdg bdg-pnd">no goal set</span></div>` : '');
-        const st = p.weekStatus ? `<div class="stxt">${p.weekStatus}</div>` : `<div style="font-size:11px;color:var(--fa);">â€”</div>`;
+        const st = p.weekStatus ? `<div class="stxt">${p.weekStatus}</div>` : `<div style="font-size:11px;color:var(--fa);">—</div>`;
         const tr = document.createElement('tr');
         if (p.dormant) tr.classList.add('dorm');
         tr.setAttribute('data-id', p.id);
         tr.onclick = () => toggleDet(p.id, tr);
-        tr.innerHTML = `<td style="padding-left:12px;width:30px;"><span class="sdlg" style="background:${SC[p.status]};display:block;margin-top:2px;"></span></td><td><div class="pn">${p.name} ${bds.join(' ')}</div>${gs}</td><td><span style="font-size:12px;color:var(--mu);">${p.phase || 'â€”'}</span></td><td>${st}</td><td><div style="display:flex;flex-wrap:wrap;gap:3px;">${avH}${exH}</div></td><td><div class="hb"><div class="hf" style="width:${bw}%;background:${SC[p.status]};opacity:.5;"></div></div><div class="hnum">${p.weekH}h <span style="color:var(--fa);">${p.moH}h/mo</span></div></td>`;
+        tr.innerHTML = `<td style="padding-left:12px;width:30px;"><span class="sdlg" style="background:${SC[p.status]};display:block;margin-top:2px;"></span></td><td><div class="pn">${p.name} ${bds.join(' ')}</div>${gs}</td><td><span style="font-size:12px;color:var(--mu);">${p.phase || '—'}</span></td><td>${st}</td><td><div style="display:flex;flex-wrap:wrap;gap:3px;">${avH}${exH}</div></td><td><div class="hb"><div class="hf" style="width:${bw}%;background:${SC[p.status]};opacity:.5;"></div></div><div class="hnum">${p.weekH}h <span style="color:var(--fa);">${p.moH}h/mo</span></div></td>`;
         tb.appendChild(tr);
       });
     }
@@ -2097,18 +2097,18 @@
     let openId = null;
     const teamEdits = {};
 
-    // STATUS HISTORY â€” populated from API on init
+    // STATUS HISTORY — populated from API on init
     let STATUS_HISTORY = {
       1: [{ wk: 'Wk 17', s: 'green', note: 'Kick-off done. VM setup in progress with Maceo.' }, { wk: 'Wk 16', s: 'green', note: 'Planning complete. Awaiting VM credentials.' }, { wk: 'Wk 15', s: 'green', note: 'Project kicked off. Team aligned on scope.' }, { wk: 'Wk 14', s: 'green', note: '' }],
       2: [{ wk: 'Wk 17', s: 'green', note: 'Frederik meeting contact persons. Two reports reviewed.' }, { wk: 'Wk 16', s: 'amber', note: 'Waiting on two partners to respond to outreach.' }, { wk: 'Wk 15', s: 'green', note: 'Partner list finalised. Outreach sent.' }, { wk: 'Wk 14', s: 'green', note: '' }],
-      3: [{ wk: 'Wk 17', s: 'green', note: 'SÃ¡ra vibe-coding new games. Decoupling in progress.' }, { wk: 'Wk 16', s: 'green', note: 'CFA pipeline submitted for review.' }, { wk: 'Wk 15', s: 'amber', note: 'Pipeline delayed â€” dependency on game instance config.' }, { wk: 'Wk 14', s: 'green', note: '' }],
-      4: [{ wk: 'Wk 17', s: 'green', note: 'Alexander and Chloe aligning on architecture.' }, { wk: 'Wk 16', s: 'green', note: 'Dev build scope agreed. Work underway.' }, { wk: 'Wk 15', s: 'green', note: 'Chatbot structure defined.' }, { wk: 'Wk 14', s: 'amber', note: 'Scope unclear â€” needed Jacob input before starting.' }],
+      3: [{ wk: 'Wk 17', s: 'green', note: 'Sára vibe-coding new games. Decoupling in progress.' }, { wk: 'Wk 16', s: 'green', note: 'CFA pipeline submitted for review.' }, { wk: 'Wk 15', s: 'amber', note: 'Pipeline delayed — dependency on game instance config.' }, { wk: 'Wk 14', s: 'green', note: '' }],
+      4: [{ wk: 'Wk 17', s: 'green', note: 'Alexander and Chloe aligning on architecture.' }, { wk: 'Wk 16', s: 'green', note: 'Dev build scope agreed. Work underway.' }, { wk: 'Wk 15', s: 'green', note: 'Chatbot structure defined.' }, { wk: 'Wk 14', s: 'amber', note: 'Scope unclear — needed Jacob input before starting.' }],
       7: [{ wk: 'Wk 17', s: 'green', note: 'Janet presenting at HHAI. TechCircle interview this week.' }, { wk: 'Wk 16', s: 'green', note: 'Interview guide finalised. First interview scheduled.' }, { wk: 'Wk 15', s: 'green', note: 'Stakeholder list agreed.' }, { wk: 'Wk 14', s: 'green', note: '' }],
       8: [{ wk: 'Wk 17', s: 'green', note: 'Handbook structure drafted. SOPs in progress.' }, { wk: 'Wk 16', s: 'green', note: 'First draft of structure complete.' }, { wk: 'Wk 15', s: 'green', note: 'Scope agreed with team.' }, { wk: 'Wk 14', s: 'green', note: '' }],
-      9: [{ wk: 'Wk 17', s: 'amber', note: 'Dev roadmap being drafted.' }, { wk: 'Wk 16', s: 'amber', note: 'Roadmap stalled â€” waiting on architecture decision.' }, { wk: 'Wk 15', s: 'amber', note: 'Scoping ongoing. More time needed.' }, { wk: 'Wk 14', s: 'green', note: 'Scoping started.' }],
-      10: [{ wk: 'Wk 17', s: 'amber', note: '20 queries to evaluate by CHI staff.' }, { wk: 'Wk 16', s: 'amber', note: 'Evaluation sheet ready. Need CHI staff time.' }, { wk: 'Wk 15', s: 'red', note: 'Blocked â€” no one available to evaluate.' }, { wk: 'Wk 14', s: 'amber', note: 'RAG deployed. Eval not started.' }],
+      9: [{ wk: 'Wk 17', s: 'amber', note: 'Dev roadmap being drafted.' }, { wk: 'Wk 16', s: 'amber', note: 'Roadmap stalled — waiting on architecture decision.' }, { wk: 'Wk 15', s: 'amber', note: 'Scoping ongoing. More time needed.' }, { wk: 'Wk 14', s: 'green', note: 'Scoping started.' }],
+      10: [{ wk: 'Wk 17', s: 'amber', note: '20 queries to evaluate by CHI staff.' }, { wk: 'Wk 16', s: 'amber', note: 'Evaluation sheet ready. Need CHI staff time.' }, { wk: 'Wk 15', s: 'red', note: 'Blocked — no one available to evaluate.' }, { wk: 'Wk 14', s: 'amber', note: 'RAG deployed. Eval not started.' }],
       13: [{ wk: 'Wk 17', s: 'amber', note: '3 page abstract submitted.' }, { wk: 'Wk 16', s: 'amber', note: 'Abstract draft in review.' }, { wk: 'Wk 15', s: 'amber', note: 'Writing underway. Tight deadline.' }, { wk: 'Wk 14', s: 'green', note: 'Abstract scoped.' }],
-      14: [{ wk: 'Wk 17', s: 'amber', note: 'Abstract mid April. Conference in May.' }, { wk: 'Wk 16', s: 'amber', note: 'Abstract being written.' }, { wk: 'Wk 15', s: 'amber', note: 'Abstract not started yet â€” capacity issues.' }, { wk: 'Wk 14', s: 'amber', note: 'Bot development ongoing.' }],
+      14: [{ wk: 'Wk 17', s: 'amber', note: 'Abstract mid April. Conference in May.' }, { wk: 'Wk 16', s: 'amber', note: 'Abstract being written.' }, { wk: 'Wk 15', s: 'amber', note: 'Abstract not started yet — capacity issues.' }, { wk: 'Wk 14', s: 'amber', note: 'Bot development ongoing.' }],
     };
 
     function getHistory(projId, currentStatus, currentNote) {
@@ -2142,8 +2142,8 @@
       <div style="display:flex;align-items:center;gap:7px;padding:3px 0;cursor:${h.note ? 'pointer' : 'default'};" onclick="${h.note ? `toggleHistNote('hn-${projId}-${i}')` : ''}" >
         <span style="color:var(--fa);font-family:'DM Mono',monospace;font-size:10px;width:40px;flex-shrink:0;">${h.wk}</span>
         <span class="sdlg" style="background:${SC[h.s] || 'var(--b)'};width:8px;height:8px;flex-shrink:0;margin-top:0;"></span>
-        <span style="font-size:12px;color:var(--mu);flex:1;">${sl[h.s] || 'â€”'}</span>
-        ${h.note ? `<span style="font-size:10px;color:var(--bl);">â–¾ note</span>` : ''}
+        <span style="font-size:12px;color:var(--mu);flex:1;">${sl[h.s] || '—'}</span>
+        ${h.note ? `<span style="font-size:10px;color:var(--bl);">▾ note</span>` : ''}
       </div>
       ${h.note ? `<div id="hn-${projId}-${i}" style="display:none;font-size:11px;color:var(--mu);line-height:1.5;padding:5px 8px 6px 47px;border-left:2px solid var(--b);margin-left:0;">${h.note}</div>` : ''}
     </div>`).join('');
@@ -2191,14 +2191,14 @@
       const sl = { green: 'On track', amber: 'Needs discussion', red: 'Urgent', gray: 'Dormant' };
       const flash = document.createElement('div');
       flash.style.cssText = `position:fixed;bottom:24px;right:24px;background:var(--tx);color:#fff;font-size:13px;font-family:'DM Sans',sans-serif;padding:10px 18px;border-radius:var(--rl);z-index:999;transition:opacity .4s;`;
-      flash.textContent = `${p.name} â†’ ${sl[newStatus]} Â· ${currentEditor}`;
+      flash.textContent = `${p.name} → ${sl[newStatus]} · ${currentEditor}`;
       document.body.appendChild(flash);
       setTimeout(() => { flash.style.opacity = '0'; setTimeout(() => flash.remove(), 400); }, 2000);
     }
 
     function renderProjectPanel(projId, panel) {
       const p = PROJECTS.find(x => x.id === projId);
-      const editNote = teamEdits[projId] ? `<div style="font-size:10px;color:var(--bl);margin-top:8px;">Edited by ${teamEdits[projId].by} Â· ${teamEdits[projId].time}</div>` : '';
+      const editNote = teamEdits[projId] ? `<div style="font-size:10px;color:var(--bl);margin-top:8px;">Edited by ${teamEdits[projId].by} · ${teamEdits[projId].time}</div>` : '';
       const statusC = { green: 'var(--gn)', amber: 'var(--am)', red: 'var(--rd)', gray: 'var(--dm)' };
       const statusLbl = { green: 'On track', amber: 'Needs discussion', red: 'Urgent', gray: 'No update' };
       panel.innerHTML = `
@@ -2215,7 +2215,7 @@
     function renderTeamReadOnly(p, container) {
       const at = [...p.po.map(x => ({ ...x, rk: 'PO' })), ...p.pm.map(x => ({ ...x, rk: 'PM' })), ...p.contrib.map(x => ({ ...x, rk: x.r }))];
       const tH = at.length ? at.map((x, pi) => { const c = AVC[pi % AVC.length]; const rem = PEOPLE.find(pp => pp.name === x.n)?.inactive; return `<div class="dtr" style="${rem ? 'opacity:0.4;' : ''}"><span class="av" style="background:${c.bg};color:${c.fg};width:24px;height:24px;font-size:9px;">${ini(x.n)}</span><span style="flex:1;">${x.n}${rem ? ' <span style="font-size:9px;">(removed)</span>' : ''}</span><span class="drl">${RLBL[x.rk] || x.rk}</span></div>`; }).join('') : '<div style="font-size:12px;color:var(--fa);">Not assigned</div>';
-      const editNote = teamEdits[p.id] ? `<div style="font-size:10px;color:var(--bl);margin-top:8px;">Edited by ${teamEdits[p.id].by} Â· ${teamEdits[p.id].time}</div>` : '';
+      const editNote = teamEdits[p.id] ? `<div style="font-size:10px;color:var(--bl);margin-top:8px;">Edited by ${teamEdits[p.id].by} · ${teamEdits[p.id].time}</div>` : '';
       container.innerHTML = `
     <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:7px;">
       <div class="dlbl" style="margin-bottom:0;">Team</div>
@@ -2230,7 +2230,7 @@
       if (openId === id && !editTeam) { openId = null; return; }
       openId = id; tr.classList.add('exp');
       const p = PROJECTS.find(x => x.id === id);
-      const gH = p.goal ? `<div style="font-size:13px;color:var(--mu);line-height:1.5;margin-bottom:4px;">${p.goal}</div><div style="font-size:11px;color:${p.goalApproved ? 'var(--gn)' : 'var(--am)'};">${p.goalApproved ? 'âœ“ Approved' : 'Pending PO approval'}</div>` : '<div style="font-size:12px;color:var(--fa);">No goal set</div>';
+      const gH = p.goal ? `<div style="font-size:13px;color:var(--mu);line-height:1.5;margin-bottom:4px;">${p.goal}</div><div style="font-size:11px;color:${p.goalApproved ? 'var(--gn)' : 'var(--am)'};">${p.goalApproved ? '✓ Approved' : 'Pending PO approval'}</div>` : '<div style="font-size:12px;color:var(--fa);">No goal set</div>';
       const msH = p.marks.length ? p.marks.map(m => `<div style="display:flex;align-items:center;gap:6px;margin-bottom:4px;font-size:12px;"><span style="font-size:10px;padding:1px 5px;border-radius:3px;${m.t === 'd' ? 'background:var(--rb);color:var(--rd);' : 'background:var(--ab);color:var(--am);'}">${m.t === 'd' ? 'Deadline' : 'Milestone'}</span><span style="color:var(--mu);">${m.l}</span><span style="font-family:'DM Mono',monospace;font-size:10px;color:var(--fa);margin-left:auto;">${m.d}</span></div>`).join('') : '<div style="font-size:12px;color:var(--fa);">None set</div>';
       const histHTML = renderStatusHistory(id, p.status, p.weekStatus);
       const detTr = document.createElement('tr');
@@ -2243,9 +2243,9 @@
     </div>
     <div>
       <div class="dlbl">This week</div>
-      <div style="font-size:13px;color:var(--mu);line-height:1.6;margin-bottom:12px;">${p.weekStatus || 'â€”'}</div>
-      ${p.celebrate ? `<div style="font-size:12px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-bottom:10px;">ðŸŽ‰ ${p.celebrate}</div>` : ''}
-      ${p.decision ? `<div style="font-size:12px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-bottom:10px;">ðŸš© ${p.decision}</div>` : ''}
+      <div style="font-size:13px;color:var(--mu);line-height:1.6;margin-bottom:12px;">${p.weekStatus || '—'}</div>
+      ${p.celebrate ? `<div style="font-size:12px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-bottom:10px;">🎉 ${p.celebrate}</div>` : ''}
+      ${p.decision ? `<div style="font-size:12px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-bottom:10px;">🚩 ${p.decision}</div>` : ''}
       ${histHTML}
     </div>
     <div>
@@ -2282,7 +2282,7 @@
       <span class="av" style="background:${c.bg};color:${c.fg};width:24px;height:24px;font-size:9px;flex-shrink:0;">${ini(x.n)}</span>
       <span style="flex:1;font-size:12px;">${x.n}</span>
       <select style="font-size:12px;padding:3px 6px;width:140px;">${rOpts}</select>
-      <button onclick="this.closest('.team-edit-row').remove()" style="font-size:14px;color:var(--fa);background:transparent;border:none;cursor:pointer;padding:0 4px;flex-shrink:0;">Ã—</button>
+      <button onclick="this.closest('.team-edit-row').remove()" style="font-size:14px;color:var(--fa);background:transparent;border:none;cursor:pointer;padding:0 4px;flex-shrink:0;">×</button>
     </div>`;
       }).join('');
       container.innerHTML = `
@@ -2314,7 +2314,7 @@
       const container = document.getElementById('team-rows-' + projId);
       const row = document.createElement('div'); row.className = 'team-edit-row';
       row.style.cssText = 'display:flex;align-items:center;gap:6px;margin-bottom:6px;';
-      row.innerHTML = `<span class="av" style="background:${c.bg};color:${c.fg};width:24px;height:24px;font-size:9px;flex-shrink:0;">${ini(name)}</span><span style="flex:1;font-size:12px;">${name}</span><select style="font-size:12px;padding:3px 6px;width:140px;">${rOpts}</select><button onclick="this.closest('.team-edit-row').remove()" style="font-size:14px;color:var(--fa);background:transparent;border:none;cursor:pointer;padding:0 4px;flex-shrink:0;">Ã—</button>`;
+      row.innerHTML = `<span class="av" style="background:${c.bg};color:${c.fg};width:24px;height:24px;font-size:9px;flex-shrink:0;">${ini(name)}</span><span style="flex:1;font-size:12px;">${name}</span><select style="font-size:12px;padding:3px 6px;width:140px;">${rOpts}</select><button onclick="this.closest('.team-edit-row').remove()" style="font-size:14px;color:var(--fa);background:transparent;border:none;cursor:pointer;padding:0 4px;flex-shrink:0;">×</button>`;
       container.appendChild(row);
       personSel.value = '';
     }
@@ -2368,7 +2368,7 @@
       active.forEach(p => {
         const fresh = p.lastCheckinWeek === _curWk2;
         const r = document.createElement('div'); r.className = 'subrow';
-        r.innerHTML = `<span class="subname">${p.name}</span><span class="tick ${fresh ? 'td' : 'tm'}">${fresh ? 'âœ“' : '!'}</span>`;
+        r.innerHTML = `<span class="subname">${p.name}</span><span class="tick ${fresh ? 'td' : 'tm'}">${fresh ? '✓' : '!'}</span>`;
         sl.appendChild(r);
       });
       const cl = document.getElementById('caplist'); cl.innerHTML = '';
@@ -2379,7 +2379,7 @@
         const shortName = p.name.split(' ').slice(0, 2).join(' ');
         const row = document.createElement('div'); row.className = 'caprow';
         if (manageMode) {
-          row.innerHTML = `<span class="capdot" style="background:${dotC};"></span><span class="capname">${shortName}</span><div class="capbar"><div class="capfill" style="width:${pct}%;"></div></div><button onclick="removePerson(${p.id})" style="font-size:13px;line-height:1;color:var(--rd);background:transparent;border:none;cursor:pointer;padding:0 2px;flex-shrink:0;" title="Remove person">Ã—</button>`;
+          row.innerHTML = `<span class="capdot" style="background:${dotC};"></span><span class="capname">${shortName}</span><div class="capbar"><div class="capfill" style="width:${pct}%;"></div></div><button onclick="removePerson(${p.id})" style="font-size:13px;line-height:1;color:var(--rd);background:transparent;border:none;cursor:pointer;padding:0 2px;flex-shrink:0;" title="Remove person">×</button>`;
         } else {
           row.innerHTML = `<span class="capdot" style="background:${dotC};"></span><span class="capname">${shortName}</span><div class="capbar"><div class="capfill" style="width:${pct}%;"></div></div><span class="caph">${p.totalH}h / ${p.availH}h</span>`;
         }
@@ -2414,14 +2414,14 @@
           mr.style.cssText = 'display:flex;align-items:center;gap:6px;margin-bottom:4px;';
           const isSelf = name === currentEditor;
           const canRemove = !isSelf || MANAGERS.length > 1;
-          mr.innerHTML = `<span style="font-size:11px;color:var(--mu);flex:1;">${name.split(' ').slice(0,2).join(' ')}${isSelf ? ' <span style="font-size:9px;color:var(--fa);">(you)</span>' : ''}</span>${canRemove ? `<button onclick="removeManager('${name.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" style="font-size:13px;line-height:1;color:var(--rd);background:transparent;border:none;cursor:pointer;padding:0 2px;" title="Remove manager">Ã—</button>` : ''}`;
+          mr.innerHTML = `<span style="font-size:11px;color:var(--mu);flex:1;">${name.split(' ').slice(0,2).join(' ')}${isSelf ? ' <span style="font-size:9px;color:var(--fa);">(you)</span>' : ''}</span>${canRemove ? `<button onclick="removeManager('${name.replace(/\\/g,'\\\\').replace(/'/g,"\\'")}')" style="font-size:13px;line-height:1;color:var(--rd);background:transparent;border:none;cursor:pointer;padding:0 2px;" title="Remove manager">×</button>` : ''}`;
           mgrDiv.appendChild(mr);
         });
         const nonMgrs = PEOPLE.filter(p => !p.inactive && !MANAGERS.includes(p.name));
         if (nonMgrs.length) {
           const addRow = document.createElement('div');
           addRow.style.cssText = 'display:flex;gap:4px;margin-top:6px;';
-          addRow.innerHTML = `<select id="new-mgr-sel" style="flex:1;font-size:11px;padding:3px 5px;border:0.5px solid var(--bm);border-radius:var(--r);background:var(--bg);"><option value="">Add managerâ€¦</option>${nonMgrs.map(p => `<option value="${p.name.replace(/"/g,'&quot;')}">${p.name.split(' ').slice(0,2).join(' ')}</option>`).join('')}</select><button onclick="addManager()" style="font-size:11px;color:var(--bl);background:var(--bb);border:0.5px solid rgba(26,95,168,.25);border-radius:var(--r);padding:2px 7px;cursor:pointer;">Add</button>`;
+          addRow.innerHTML = `<select id="new-mgr-sel" style="flex:1;font-size:11px;padding:3px 5px;border:0.5px solid var(--bm);border-radius:var(--r);background:var(--bg);"><option value="">Add manager…</option>${nonMgrs.map(p => `<option value="${p.name.replace(/"/g,'&quot;')}">${p.name.split(' ').slice(0,2).join(' ')}</option>`).join('')}</select><button onclick="addManager()" style="font-size:11px;color:var(--bl);background:var(--bb);border:0.5px solid rgba(26,95,168,.25);border-radius:var(--r);padding:2px 7px;cursor:pointer;">Add</button>`;
           mgrDiv.appendChild(addRow);
         }
         cl.appendChild(mgrDiv);
@@ -2479,7 +2479,7 @@
     }
     function zoomTl(dir) { tlWeeks = Math.max(4, Math.min(26, tlWeeks - dir * 2)); buildTimeline(); }
 
-    // AGENDA â€” leadership notes + project celebrate/decision flags
+    // AGENDA — leadership notes + project celebrate/decision flags
     function buildAgenda() {
       const body = document.getElementById('agenda-body'); body.innerHTML = '';
       const items = [];
@@ -2491,8 +2491,8 @@
 
       // Project celebrate and decision flags
       PROJECTS.filter(p => !p.dormant).forEach(p => {
-        if (p.celebrate) items.push({ who: p.name, role: 'celebrate', icon: 'ðŸŽ‰ ', txt: p.celebrate });
-        if (p.decision)  items.push({ who: p.name, role: 'decision',  icon: 'ðŸš© ', txt: p.decision });
+        if (p.celebrate) items.push({ who: p.name, role: 'celebrate', icon: '🎉 ', txt: p.celebrate });
+        if (p.decision)  items.push({ who: p.name, role: 'decision',  icon: '🚩 ', txt: p.decision });
       });
 
       document.getElementById('agenda-count').textContent = items.length + (items.length === 1 ? ' item' : ' items');
@@ -2518,7 +2518,7 @@
     function toggleAgenda() {
       const b = document.getElementById('agenda-body');
       b.classList.toggle('open');
-      document.getElementById('agenda-chev').textContent = b.classList.contains('open') ? 'â–´' : 'â–¾';
+      document.getElementById('agenda-chev').textContent = b.classList.contains('open') ? '▴' : '▾';
     }
 
     // PEOPLE LAYER
@@ -2552,7 +2552,7 @@
         } else if (p.role === 'pm') {
           contentHTML = p.pmNote ? `<div class="plbl">This week</div><div class="pofree">${p.pmNote}</div>` : `<div style="font-size:12px;color:var(--fa);">No note this week.</div>`;
         } else {
-          const ph = p.projs.map(x => `<div class="pprow"><span>${x.p}</span><span class="pph">${x.h}h Â· ${x.nextH}h nxt</span></div>${x.note ? `<div class="pnote">${x.note}</div>` : ''}`).join('');
+          const ph = p.projs.map(x => `<div class="pprow"><span>${x.p}</span><span class="pph">${x.h}h · ${x.nextH}h nxt</span></div>${x.note ? `<div class="pnote">${x.note}</div>` : ''}`).join('');
           contentHTML = `<div class="plbl">Projects</div>${ph || '<div style="font-size:12px;color:var(--fa);">No projects logged.</div>'}`;
         }
         const blkH = p.submitted === false ? `<div class="miss">Check-in not submitted</div>` :
@@ -2574,11 +2574,11 @@
         const sec = document.createElement('div'); sec.className = 'apsec';
         const phaseOpts = ['', 'Ideation', 'Scoping', 'Planning', 'Development', 'Execution', 'Research', 'Delivery', 'Evaluation', 'Finalization'].map(ph => `<option${ph === proj.phase ? ' selected' : ''}>${ph}</option>`).join('');
         const phaseInput = `<select class="aphase" onchange="proj.phase=this.value;fetch('api/projects/${proj.id}',{method:'PATCH',headers:{'Content-Type':'application/json'},body:JSON.stringify({phase:this.value,editor:currentEditor||'system'})});event.stopPropagation();" style="width:110px;" onclick="event.stopPropagation();">${phaseOpts}</select>`;
-        const indicators = `<div class="apinds">${hasCelebrate ? `<span class="ind-chat" title="${proj.celebrate}">ðŸ’¬ Discuss/Celebrate</span>` : ''} ${hasDecision ? `<span class="ind-flag" title="${proj.decision}">ðŸš© Decision needed</span>` : ''}</div>`;
+        const indicators = `<div class="apinds">${hasCelebrate ? `<span class="ind-chat" title="${proj.celebrate}">💬 Discuss/Celebrate</span>` : ''} ${hasDecision ? `<span class="ind-flag" title="${proj.decision}">🚩 Decision needed</span>` : ''}</div>`;
         const head = document.createElement('div'); head.className = 'aphead';
         const statusDots = ['green', 'amber', 'red', 'gray'].map(s => `<span onclick="event.stopPropagation();changeAllocStatus(${proj.id},'${s}')" title="${{ green: 'On track', amber: 'Needs discussion', red: 'Urgent', gray: 'Dormant' }[s]}" style="width:11px;height:11px;border-radius:50%;background:${SC[s]};display:inline-block;cursor:pointer;outline:${proj.status === s ? '2px solid var(--tx)' : 'none'};outline-offset:1px;flex-shrink:0;transition:outline .1s;"></span>`).join('');
-        head.innerHTML = `<span class="sdlg" style="background:${SC[proj.status]};" id="ag-dot-${proj.id}"></span><span class="aptitle">${proj.name}</span>${indicators}<div style="display:flex;gap:4px;align-items:center;" id="ag-dots-${proj.id}">${statusDots}</div>${phaseInput}<span class="apmeta">${totH}h proj.</span>${contrib.length === 0 ? '<span class="apmeta" style="color:var(--rd);">unallocated</span>' : ''}<button onclick="event.stopPropagation();openProjTeamEdit(${proj.id})" style="font-size:11px;color:var(--bl);background:transparent;border:0.5px solid rgba(26,95,168,.25);border-radius:var(--r);padding:2px 7px;cursor:pointer;margin-left:4px;flex-shrink:0;">âš™ Edit project</button><span class="apchev">â–¾</span>`;
-        head.onclick = (e) => { if (e.target.classList.contains('aphase')) return; const b = sec.querySelector('.apbody'); b.classList.toggle('open'); head.querySelector('.apchev').textContent = b.classList.contains('open') ? 'â–´' : 'â–¾'; };
+        head.innerHTML = `<span class="sdlg" style="background:${SC[proj.status]};" id="ag-dot-${proj.id}"></span><span class="aptitle">${proj.name}</span>${indicators}<div style="display:flex;gap:4px;align-items:center;" id="ag-dots-${proj.id}">${statusDots}</div>${phaseInput}<span class="apmeta">${totH}h proj.</span>${contrib.length === 0 ? '<span class="apmeta" style="color:var(--rd);">unallocated</span>' : ''}<button onclick="event.stopPropagation();openProjTeamEdit(${proj.id})" style="font-size:11px;color:var(--bl);background:transparent;border:0.5px solid rgba(26,95,168,.25);border-radius:var(--r);padding:2px 7px;cursor:pointer;margin-left:4px;flex-shrink:0;">⚙ Edit project</button><span class="apchev">▾</span>`;
+        head.onclick = (e) => { if (e.target.classList.contains('aphase')) return; const b = sec.querySelector('.apbody'); b.classList.toggle('open'); head.querySelector('.apchev').textContent = b.classList.contains('open') ? '▴' : '▾'; };
         const body = document.createElement('div'); body.className = 'apbody';
         const hr = document.createElement('div'); hr.className = 'aprow aph';
         hr.innerHTML = `<div class="apc hc">Contributor</div><div class="apc hc">Hrs nxt wk</div><div class="apc hc">Note</div><div class="apc hc">Attribution</div>`;
@@ -2603,13 +2603,13 @@
           if (proj.celebrate) {
             const cel = document.createElement('div');
             cel.style.cssText = 'display:flex;flex-direction:column;gap:3px;';
-            cel.innerHTML = `<div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--fa);font-weight:500;">Coordinate / discuss / celebrate</div><div style="font-size:12px;color:var(--tx);line-height:1.5;background:var(--gb);padding:7px 10px;border-radius:var(--r);">ðŸŽ‰ ${proj.celebrate}</div>`;
+            cel.innerHTML = `<div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--fa);font-weight:500;">Coordinate / discuss / celebrate</div><div style="font-size:12px;color:var(--tx);line-height:1.5;background:var(--gb);padding:7px 10px;border-radius:var(--r);">🎉 ${proj.celebrate}</div>`;
             pmNotes.appendChild(cel);
           }
           if (proj.decision) {
             const dec = document.createElement('div');
             dec.style.cssText = 'display:flex;flex-direction:column;gap:3px;';
-            dec.innerHTML = `<div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--fa);font-weight:500;">Decision needed</div><div style="font-size:12px;color:var(--tx);line-height:1.5;background:var(--rb);padding:7px 10px;border-radius:var(--r);">ðŸš© ${proj.decision}</div>`;
+            dec.innerHTML = `<div style="font-size:10px;text-transform:uppercase;letter-spacing:.06em;color:var(--fa);font-weight:500;">Decision needed</div><div style="font-size:12px;color:var(--tx);line-height:1.5;background:var(--rb);padding:7px 10px;border-radius:var(--r);">🚩 ${proj.decision}</div>`;
             pmNotes.appendChild(dec);
           }
           body.appendChild(pmNotes);
@@ -2618,21 +2618,21 @@
         msec.innerHTML = `<div class="dlbl">Milestones & deadlines</div>`;
         proj.marks.forEach((m, mi) => {
           const mr = document.createElement('div'); mr.className = 'msrow';
-          mr.innerHTML = `<span class="mstype ${m.t === 'd' ? 'mstype-d' : 'mstype-m'}">${m.t === 'd' ? 'Deadline' : 'Milestone'}</span><span class="mslbl">${m.l}</span><span class="msdate">${m.d}</span>${m.id ? `<button class="ms-ci-rm" onclick="deleteMilestone(${m.id},${proj.id})" title="Delete">Ã—</button>` : ''}`;
+          mr.innerHTML = `<span class="mstype ${m.t === 'd' ? 'mstype-d' : 'mstype-m'}">${m.t === 'd' ? 'Deadline' : 'Milestone'}</span><span class="mslbl">${m.l}</span><span class="msdate">${m.d}</span>${m.id ? `<button class="ms-ci-rm" onclick="deleteMilestone(${m.id},${proj.id})" title="Delete">×</button>` : ''}`;
           msec.appendChild(mr);
         });
         const addMsBtn = document.createElement('button'); addMsBtn.className = 'acbtn'; addMsBtn.textContent = '+ Add milestone / deadline'; addMsBtn.style.marginLeft = '0';
         addMsBtn.onclick = () => {
           if (!currentEditor) { alert('Please select who you are editing as.'); return; }
           const mr = document.createElement('div'); mr.className = 'msrow';
-          mr.innerHTML = `<select style="flex:1;font-size:11px;padding:3px 6px;"><option value="m">Milestone</option><option value="d">Deadline</option></select><input type="text" placeholder="Label..." style="flex:2;font-size:11px;padding:3px 6px;"><input type="date" style="flex:1.5;font-size:11px;padding:3px 6px;"><button onclick="saveMilestone(this,${proj.id})" style="font-size:11px;padding:2px 8px;border:0.5px solid var(--gn);border-radius:var(--r);background:var(--gb);color:var(--gn);cursor:pointer;white-space:nowrap;">Save</button><button class="ms-ci-rm" onclick="this.closest('.msrow').remove()">Ã—</button>`;
+          mr.innerHTML = `<select style="flex:1;font-size:11px;padding:3px 6px;"><option value="m">Milestone</option><option value="d">Deadline</option></select><input type="text" placeholder="Label..." style="flex:2;font-size:11px;padding:3px 6px;"><input type="date" style="flex:1.5;font-size:11px;padding:3px 6px;"><button onclick="saveMilestone(this,${proj.id})" style="font-size:11px;padding:2px 8px;border:0.5px solid var(--gn);border-radius:var(--r);background:var(--gb);color:var(--gn);cursor:pointer;white-space:nowrap;">Save</button><button class="ms-ci-rm" onclick="this.closest('.msrow').remove()">×</button>`;
           msec.insertBefore(mr, addMsBtn);
         };
         msec.appendChild(addMsBtn);
         body.appendChild(msec);
         if (contrib.length > 0) {
           const tot = document.createElement('div'); tot.className = 'aptot';
-          tot.innerHTML = `<span>${totH}h total projected next week</span>${proj.goal ? `<span style="color:${proj.goalApproved ? 'var(--gn)' : 'var(--am)'};">${proj.goalApproved ? 'âœ“ Goal approved' : 'Goal pending approval'}</span>` : '<span style="color:var(--am);">No goal set</span>'}`;
+          tot.innerHTML = `<span>${totH}h total projected next week</span>${proj.goal ? `<span style="color:${proj.goalApproved ? 'var(--gn)' : 'var(--am)'};">${proj.goalApproved ? '✓ Goal approved' : 'Goal pending approval'}</span>` : '<span style="color:var(--am);">No goal set</span>'}`;
           body.appendChild(tot);
         }
         const addB = document.createElement('button'); addB.className = 'acbtn'; addB.textContent = '+ Add contributor';
@@ -2699,9 +2699,9 @@
       const dayGrid = DAYS.map(d => `<div class="cdayci on" data-day="${d}" onclick="toggleCDay(this)"><div class="cdayn">${d}</div><div class="cdayblocks">${['AM', 'Aft', 'Late'].map((bl, bi) => `<div class="cdayblock on" onclick="event.stopPropagation();toggleCBlock(this)">${bl}</div>`).join('')}</div></div>`).join('');
       const projOpts = '<option value="">Select project...</option>' + PNAMES.map(p => `<option>${p}</option>`).join('');
       el.innerHTML = `
-    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">ðŸ˜Š</span><span class="emoj" onclick="selEmoji(this)">âš¡</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜´</span><span class="emoj" onclick="selEmoji(this)">ðŸ¤¯</span></div></div>
-    <div class="cib"><div class="cit">Your schedule â€” week 18</div><div style="font-size:12px;color:var(--mu);margin-bottom:8px;">Default shown. Tap a block to toggle on/off.</div><div class="sgci">${dayGrid}</div><textarea placeholder="Any changes from your default? Remote, travelling, unusual hours..." style="min-height:34px;"></textarea></div>
-    <div class="cib"><div class="cit">Availability</div><div class="fl"><div class="flr"><div class="fll">How open are you?</div><div class="pr"><button class="pill pill-r" onclick="selPill(this,'av-c')">Overloaded</button><button class="pill pill-a" onclick="selPill(this,'av-c')">Not open</button><button class="pill pill-a" onclick="selPill(this,'av-c')">Open â€” small tasks</button><button class="pill pill-g" onclick="selPill(this,'av-c')">Open â€” projects</button></div></div><div class="flr" style="max-width:150px;"><div class="fll">Available hours</div><input type="number" placeholder="e.g. 4"></div></div></div>
+    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">😊</span><span class="emoj" onclick="selEmoji(this)">⚡</span><span class="emoj" onclick="selEmoji(this)">😐</span><span class="emoj" onclick="selEmoji(this)">😴</span><span class="emoj" onclick="selEmoji(this)">🤯</span></div></div>
+    <div class="cib"><div class="cit">Your schedule — week 18</div><div style="font-size:12px;color:var(--mu);margin-bottom:8px;">Default shown. Tap a block to toggle on/off.</div><div class="sgci">${dayGrid}</div><textarea placeholder="Any changes from your default? Remote, travelling, unusual hours..." style="min-height:34px;"></textarea></div>
+    <div class="cib"><div class="cit">Availability</div><div class="fl"><div class="flr"><div class="fll">How open are you?</div><div class="pr"><button class="pill pill-r" onclick="selPill(this,'av-c')">Overloaded</button><button class="pill pill-a" onclick="selPill(this,'av-c')">Not open</button><button class="pill pill-a" onclick="selPill(this,'av-c')">Open — small tasks</button><button class="pill pill-g" onclick="selPill(this,'av-c')">Open — projects</button></div></div><div class="flr" style="max-width:150px;"><div class="fll">Available hours</div><input type="number" placeholder="e.g. 4"></div></div></div>
     <div class="cib"><div class="cit">Projects this week</div><div id="c-projs"><div class="pb"><div class="g3" style="margin-bottom:7px;"><select>${projOpts}</select><input type="number" placeholder="Hours this wk"><input type="number" placeholder="Est. next wk"></div><textarea placeholder="What did you work on? What are you picking up next week?"></textarea></div></div><button class="addb" onclick="addCProj()">+ Add project</button></div>
     <div class="cib"><div class="cit">Blockers</div><textarea placeholder="Anything blocking you? What would help?"></textarea></div>
     <button class="subb" onclick="submitCheckin('c')">Submit Friday check-in</button>`;
@@ -2711,10 +2711,10 @@
       const projOpts = '<option value="">Select your project...</option>' + PNAMES.map(p => `<option>${p}</option>`).join('');
       const contOpts = '<option value="">Contributor...</option>' + PEOPLE.map(p => `<option>${p.name}</option>`).join('');
       el.innerHTML = `
-    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">ðŸ˜Š</span><span class="emoj" onclick="selEmoji(this)">âš¡</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜´</span><span class="emoj" onclick="selEmoji(this)">ðŸ¤¯</span></div></div>
-    <div class="cib"><div class="cit">Availability</div><div class="pr"><button class="pill pill-r" onclick="selPill(this,'av-pm')">Overloaded</button><button class="pill pill-a sel" onclick="selPill(this,'av-pm')">Not open</button><button class="pill pill-a" onclick="selPill(this,'av-pm')">Open â€” small tasks</button><button class="pill pill-g" onclick="selPill(this,'av-pm')">Open â€” projects</button></div></div>
+    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">😊</span><span class="emoj" onclick="selEmoji(this)">⚡</span><span class="emoj" onclick="selEmoji(this)">😐</span><span class="emoj" onclick="selEmoji(this)">😴</span><span class="emoj" onclick="selEmoji(this)">🤯</span></div></div>
+    <div class="cib"><div class="cit">Availability</div><div class="pr"><button class="pill pill-r" onclick="selPill(this,'av-pm')">Overloaded</button><button class="pill pill-a sel" onclick="selPill(this,'av-pm')">Not open</button><button class="pill pill-a" onclick="selPill(this,'av-pm')">Open — small tasks</button><button class="pill pill-g" onclick="selPill(this,'av-pm')">Open — projects</button></div></div>
     <div class="cib"><div class="cit">Your presence this week</div><textarea placeholder="What do you want the team to know about your week?"></textarea></div>
-    <div class="tip-box">For adjusting contributor hours and tasks, go to <strong>Allocation â†’ Allocation grid</strong> and edit directly there. Come back here for status, goals, and milestones.</div>
+    <div class="tip-box">For adjusting contributor hours and tasks, go to <strong>Allocation → Allocation grid</strong> and edit directly there. Come back here for status, goals, and milestones.</div>
     <div id="pm-projs">
       <div class="cib">
         <div class="cit">Project update</div>
@@ -2724,7 +2724,7 @@
           <div class="flr"><div class="fll">Milestones & deadlines</div><div id="pm-ms-0"></div><button class="addb" onclick="addPMMs('pm-ms-0')">+ Add milestone / deadline</button></div>
           <div class="flr"><div class="fll">Status this week</div><div class="pr"><button class="pill pill-g sel" onclick="selPill(this,'st-0')">On track</button><button class="pill pill-a" onclick="selPill(this,'st-0')">Needs discussion</button><button class="pill pill-r" onclick="selPill(this,'st-0')">Urgent</button></div></div>
           <div class="flr"><div class="fll">Weekly status note</div><textarea placeholder="What happened this week? Any risks or blockers?"></textarea></div>
-          <div class="flr"><div class="fll">Monthly goal â€” confirm or update</div><input type="text" placeholder="What does done look like this month?"><div class="goal-pend">This will be sent to the PO for approval. Projects without an approved goal are flagged on the dashboard.</div></div>
+          <div class="flr"><div class="fll">Monthly goal — confirm or update</div><input type="text" placeholder="What does done look like this month?"><div class="goal-pend">This will be sent to the PO for approval. Projects without an approved goal are flagged on the dashboard.</div></div>
           <div class="flr"><div class="fll">Anything to coordinate, discuss or celebrate?</div><textarea placeholder="Blockers, wins, things to bring to the group..."></textarea></div>
           <div class="flr"><div class="fll">What needs a decision before things can move forward?</div><textarea placeholder="What is stuck and needs a directional call from leadership?"></textarea></div>
         </div>
@@ -2743,14 +2743,14 @@
       const pendingGoals = PROJECTS.filter(p => !p.goalApproved && !p.dormant && p.goal);
       const gaHTML = pendingGoals.length ? pendingGoals.map((p, i) => `<div class="pb" style="margin-bottom:8px;"><div style="display:flex;align-items:center;gap:7px;margin-bottom:7px;"><span class="sdlg" style="background:${SC[p.status]};"></span><span style="font-size:13px;font-weight:500;">${p.name}</span><span class="bdg bdg-pnd" style="margin-left:auto;">Pending</span></div><div style="font-size:12px;color:var(--mu);margin-bottom:8px;">PM proposed: <em>"${p.goal}"</em></div><div class="pr" style="margin-bottom:8px;"><button class="pill pill-g" onclick="selPill(this,'ga-${i}')">Approve</button><button class="pill pill-a" onclick="selPill(this,'ga-${i}')">Adjust</button><button class="pill pill-r" onclick="selPill(this,'ga-${i}')">Reject</button></div><textarea placeholder="Notes or adjusted goal text..."></textarea></div>`).join('') : '<div style="font-size:12px;color:var(--fa);">No goals pending approval.</div>';
       el.innerHTML = `
-    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">ðŸ˜Š</span><span class="emoj" onclick="selEmoji(this)">âš¡</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜</span><span class="emoj" onclick="selEmoji(this)">ðŸ˜´</span><span class="emoj" onclick="selEmoji(this)">ðŸ¤¯</span></div></div>
+    <div class="cib"><div class="cit">How are you feeling?</div><div class="emojis"><span class="emoj" onclick="selEmoji(this)">😊</span><span class="emoj" onclick="selEmoji(this)">⚡</span><span class="emoj" onclick="selEmoji(this)">😐</span><span class="emoj" onclick="selEmoji(this)">😴</span><span class="emoj" onclick="selEmoji(this)">🤯</span></div></div>
     <div class="cib"><div class="cit">Your presence this week</div><textarea style="min-height:72px;" placeholder="What do you want the team to know about your week?"></textarea></div>
-    <div class="cib"><div class="cit">Milestones & deadlines â€” all projects</div><div style="font-size:12px;color:var(--mu);margin-bottom:10px;">Review or add milestones across any project.</div>
+    <div class="cib"><div class="cit">Milestones & deadlines — all projects</div><div style="font-size:12px;color:var(--mu);margin-bottom:10px;">Review or add milestones across any project.</div>
       <div class="flr" style="margin-bottom:10px;"><div class="fll">Project</div><select>${projOpts}</select></div>
       <div id="po-ms"></div>
       <button class="addb" onclick="addPMMs('po-ms')">+ Add milestone / deadline</button>
     </div>
-    <div class="cib"><div class="cit">Tuesday agenda</div><div class="fl"><div class="flr"><div class="fll">Anything new â€” jobs, initiatives, or ideas not yet on the board?</div><textarea placeholder="New work, ideas, or conversations that need a home or a decision..."></textarea></div></div></div>
+    <div class="cib"><div class="cit">Tuesday agenda</div><div class="fl"><div class="flr"><div class="fll">Anything new — jobs, initiatives, or ideas not yet on the board?</div><textarea placeholder="New work, ideas, or conversations that need a home or a decision..."></textarea></div></div></div>
     <div class="cib"><div class="cit">Monthly goal approvals</div>${gaHTML}</div>
     <button class="subb" onclick="submitCheckin('po')">Submit Tuesday prep</button>`;
     }
@@ -2758,7 +2758,7 @@
     function addPMMs(containerId) {
       const c = document.getElementById(containerId); if (!c) return;
       const row = document.createElement('div'); row.className = 'ms-ci-row';
-      row.innerHTML = `<select style="flex:1;font-size:12px;" data-skip="1"><option value="m">Milestone</option><option value="d">Deadline</option></select><input type="text" placeholder="Label..."><input type="date"><button class="ms-ci-rm" onclick="this.closest('.ms-ci-row').remove()">Ã—</button>`;
+      row.innerHTML = `<select style="flex:1;font-size:12px;" data-skip="1"><option value="m">Milestone</option><option value="d">Deadline</option></select><input type="text" placeholder="Label..."><input type="date"><button class="ms-ci-rm" onclick="this.closest('.ms-ci-row').remove()">×</button>`;
       c.appendChild(row);
     }
 
@@ -2787,27 +2787,27 @@
       cont.appendChild(tmpl); cProjN++;
     }
 
-    // MONTHLY REVIEW DATA â€” populated from API on init
+    // MONTHLY REVIEW DATA — populated from API on init
     let REVIEW_DATA = {
       '2026-03': {
         label: 'March 2026', saved: true, savedOn: '1 Apr 2026',
         projects: [
           { name: 'KogniKit KU', status: 'green', goal: 'Complete CFA pipeline and submit for review', outcome: 'hit', statusTrail: ['green', 'green', 'amber', 'green'], hoursLogged: 38, hoursProjected: 40, celebrate: 'Pipeline submitted ahead of schedule', decision: '' },
           { name: 'Tech Circle Innovation', status: 'green', goal: 'Conduct 3 stakeholder interviews', outcome: 'partial', statusTrail: ['amber', 'green', 'green', 'green'], hoursLogged: 22, hoursProjected: 28, celebrate: '', decision: '' },
-          { name: 'CHI In-house RAG', status: 'amber', goal: 'Deploy internal RAG with 10 test queries', outcome: 'missed', statusTrail: ['amber', 'amber', 'red', 'amber'], hoursLogged: 18, hoursProjected: 24, celebrate: '', decision: 'Needed more dev time than scoped â€” revisit estimate' },
+          { name: 'CHI In-house RAG', status: 'amber', goal: 'Deploy internal RAG with 10 test queries', outcome: 'missed', statusTrail: ['amber', 'amber', 'red', 'amber'], hoursLogged: 18, hoursProjected: 24, celebrate: '', decision: 'Needed more dev time than scoped — revisit estimate' },
           { name: 'Operations Task Force', status: 'green', goal: 'First draft of handbook structure', outcome: 'hit', statusTrail: ['green', 'green', 'green', 'green'], hoursLogged: 14, hoursProjected: 16, celebrate: 'Morten delivered full structure two days early', decision: '' },
           { name: 'ESG Project', status: 'amber', goal: 'Submit 3 page abstract', outcome: 'hit', statusTrail: ['amber', 'amber', 'amber', 'green'], hoursLogged: 9, hoursProjected: 8, celebrate: 'Abstract submitted on time!', decision: '' },
           { name: 'FERC bot', status: 'amber', goal: 'Complete two page abstract draft', outcome: 'partial', statusTrail: ['green', 'amber', 'amber', 'amber'], hoursLogged: 12, hoursProjected: 16, celebrate: '', decision: '' },
         ],
         people: [
-          { name: 'Frederik BrosbÃ¸l Kjeldsen', totalH: 37, moH: 148, logged: 134, flag: 'ok' },
-          { name: 'Morten RÃ¸ndal Olsen', totalH: 18, moH: 72, logged: 68, flag: 'ok' },
+          { name: 'Frederik Brosbøl Kjeldsen', totalH: 37, moH: 148, logged: 134, flag: 'ok' },
+          { name: 'Morten Røndal Olsen', totalH: 18, moH: 72, logged: 68, flag: 'ok' },
           { name: 'Thomas Halgaard', totalH: 37, moH: 148, logged: 140, flag: 'ok' },
-          { name: 'Bianka SzÃ¶llÃ¶si', totalH: 37, moH: 148, logged: 88, flag: 'under' },
-          { name: 'Casper ThylkjÃ¦r', totalH: 15, moH: 60, logged: 58, flag: 'ok' },
+          { name: 'Bianka Szöllösi', totalH: 37, moH: 148, logged: 88, flag: 'under' },
+          { name: 'Casper Thylkjær', totalH: 15, moH: 60, logged: 58, flag: 'ok' },
           { name: 'Alexander Velev', totalH: 15, moH: 60, logged: 62, flag: 'over' },
-          { name: 'SÃ¡ra SzabÃ³', totalH: 15, moH: 60, logged: 55, flag: 'ok' },
-          { name: 'LÃ¦rke Thansen', totalH: 15, moH: 60, logged: 44, flag: 'under' },
+          { name: 'Sára Szabó', totalH: 15, moH: 60, logged: 55, flag: 'ok' },
+          { name: 'Lærke Thansen', totalH: 15, moH: 60, logged: 44, flag: 'under' },
           { name: 'Mille Berg', totalH: 15, moH: 60, logged: 57, flag: 'ok' },
         ],
         forwardGoals: [], upcomingDeadlines: [],
@@ -2820,21 +2820,21 @@
           { name: 'CHI In-house RAG', status: 'amber', goal: '20 queries evaluated by CHI staff', outcome: 'pending', statusTrail: ['amber', 'amber', 'amber', null], hoursLogged: 20, hoursProjected: 28, celebrate: '', decision: '', upcomingDeadlines: [{ l: 'Eval complete', d: '2026-05-07', weeks: 2 }] },
           { name: 'CHI Chatbot Standardization', status: 'amber', goal: 'Present dev roadmap to Jacob for approval', outcome: 'pending', statusTrail: ['green', 'amber', 'amber', null], hoursLogged: 6, hoursProjected: 12, celebrate: '', decision: 'Need Jacob to block time to review roadmap', upcomingDeadlines: [{ l: 'Roadmap presented', d: '2026-04-30', weeks: 1 }] },
           { name: 'ESG Project', status: 'amber', goal: '3 page abstract 17/4', outcome: 'hit', statusTrail: ['amber', 'amber', 'green', null], hoursLogged: 7, hoursProjected: 8, celebrate: 'Abstract submitted on time!', decision: '', upcomingDeadlines: [] },
-          { name: 'FERC bot', status: 'amber', goal: 'Two page abstract â€” conference in May', outcome: 'pending', statusTrail: ['amber', 'amber', 'amber', null], hoursLogged: 16, hoursProjected: 20, celebrate: '', decision: '', upcomingDeadlines: [{ l: 'Abstract', d: '2026-04-20', weeks: 0 }, { l: 'Conference', d: '2026-05-20', weeks: 4 }] },
+          { name: 'FERC bot', status: 'amber', goal: 'Two page abstract — conference in May', outcome: 'pending', statusTrail: ['amber', 'amber', 'amber', null], hoursLogged: 16, hoursProjected: 20, celebrate: '', decision: '', upcomingDeadlines: [{ l: 'Abstract', d: '2026-04-20', weeks: 0 }, { l: 'Conference', d: '2026-05-20', weeks: 4 }] },
           { name: 'Tech Circle Innovation', status: 'green', goal: 'Prepare interview guide, run first interviews', outcome: 'pending', statusTrail: ['green', 'green', 'green', null], hoursLogged: 24, hoursProjected: 28, celebrate: '', decision: '', upcomingDeadlines: [{ l: 'Report draft', d: '2026-06-01', weeks: 6 }] },
           { name: 'Operations Task Force', status: 'green', goal: 'Employee handbook with SOPs before summer', outcome: 'pending', statusTrail: ['green', 'green', 'green', null], hoursLogged: 14, hoursProjected: 16, celebrate: '', decision: 'Need Jacob to approve onboarding SOP', upcomingDeadlines: [{ l: 'Handbook done', d: '2026-06-30', weeks: 10 }] },
         ],
         people: [
-          { name: 'Frederik BrosbÃ¸l Kjeldsen', totalH: 37, moH: 148, logged: 68, projected: 148, flag: 'ok' },
-          { name: 'Morten RÃ¸ndal Olsen', totalH: 18, moH: 72, logged: 28, projected: 72, flag: 'ok' },
+          { name: 'Frederik Brosbøl Kjeldsen', totalH: 37, moH: 148, logged: 68, projected: 148, flag: 'ok' },
+          { name: 'Morten Røndal Olsen', totalH: 18, moH: 72, logged: 28, projected: 72, flag: 'ok' },
           { name: 'Thomas Halgaard', totalH: 37, moH: 148, logged: 56, projected: 140, flag: 'ok' },
-          { name: 'Bianka SzÃ¶llÃ¶si', totalH: 37, moH: 148, logged: 40, projected: 56, flag: 'under' },
-          { name: 'Casper ThylkjÃ¦r', totalH: 15, moH: 60, logged: 28, projected: 56, flag: 'ok' },
+          { name: 'Bianka Szöllösi', totalH: 37, moH: 148, logged: 40, projected: 56, flag: 'under' },
+          { name: 'Casper Thylkjær', totalH: 15, moH: 60, logged: 28, projected: 56, flag: 'ok' },
           { name: 'Eleni Karydi', totalH: 15, moH: 60, logged: 22, projected: 60, flag: 'ok' },
           { name: 'Alexander Velev', totalH: 15, moH: 60, logged: 28, projected: 56, flag: 'ok' },
           { name: 'Alexis Vrielynck', totalH: 37, moH: 148, logged: 36, projected: 148, flag: 'ok' },
-          { name: 'SÃ¡ra SzabÃ³', totalH: 15, moH: 60, logged: 24, projected: 60, flag: 'ok' },
-          { name: 'LÃ¦rke Thansen', totalH: 15, moH: 60, logged: 20, projected: 44, flag: 'under' },
+          { name: 'Sára Szabó', totalH: 15, moH: 60, logged: 24, projected: 60, flag: 'ok' },
+          { name: 'Lærke Thansen', totalH: 15, moH: 60, logged: 20, projected: 44, flag: 'under' },
           { name: 'Mille Berg', totalH: 15, moH: 60, logged: 18, projected: 44, flag: 'ok' },
           { name: 'Chloe Lucas', totalH: 37, moH: 148, logged: 44, projected: 148, flag: 'ok' },
         ],
@@ -2864,9 +2864,9 @@
       const savedBadge = data.saved ? `<span class="rv-saved-badge">Saved ${data.savedOn}</span>` : '';
       const statusColors = { green: 'var(--gn)', amber: 'var(--am)', red: 'var(--rd)', gray: 'var(--dm)' };
       const outcomeHTML = (outcome) => {
-        const map = { hit: 'Hit âœ“', partial: 'Partial', missed: 'Missed', pending: 'In progress' };
+        const map = { hit: 'Hit ✓', partial: 'Partial', missed: 'Missed', pending: 'In progress' };
         const cls = { hit: 'outcome-hit', partial: 'outcome-partial', missed: 'outcome-missed', pending: 'outcome-pending' };
-        return `<span class="outcome-pill ${cls[outcome] || 'outcome-pending'}">${map[outcome] || 'â€”'}</span>`;
+        return `<span class="outcome-pill ${cls[outcome] || 'outcome-pending'}">${map[outcome] || '—'}</span>`;
       };
       const trailHTML = (trail) => trail.map(s => s ? `<span class="rv-dot" style="background:${statusColors[s] || 'var(--b)'};" title="${s}"></span>` : `<span class="rv-dot" style="background:var(--b);border:0.5px solid var(--bm);" title="Not yet"></span>`).join('');
 
@@ -2883,8 +2883,8 @@
         <div class="rv-card-sub">${p.goal || 'No goal set'}</div>
         <div class="rv-row"><span class="rv-lbl">Status trail</span><div class="rv-dots">${trailHTML(p.statusTrail)}</div></div>
         <div class="rv-row"><span class="rv-lbl">Hours logged</span><span class="rv-val">${p.hoursLogged}h</span>${hoursNote}</div>
-        ${p.celebrate ? `<div style="font-size:11px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-top:7px;">ðŸŽ‰ ${p.celebrate}</div>` : ''}
-        ${p.decision ? `<div style="font-size:11px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-top:5px;">ðŸš© ${p.decision}</div>` : ''}
+        ${p.celebrate ? `<div style="font-size:11px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-top:7px;">🎉 ${p.celebrate}</div>` : ''}
+        ${p.decision ? `<div style="font-size:11px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-top:5px;">🚩 ${p.decision}</div>` : ''}
       </div>`;
         }).join('');
         const peopleRows = data.people.map(p => {
@@ -2899,7 +2899,7 @@
         }).join('');
         retroSection = `
       <div class="rv-section">
-        <div class="rv-section-title">Last month â€” retrospective</div>
+        <div class="rv-section-title">Last month — retrospective</div>
         <div class="rv-section-sub">How did projects and people perform in ${data.label}?</div>
         <div class="rv-grid">${projRows}</div>
         <div class="rv-section-title" style="font-size:13px;margin-bottom:10px;">People</div>
@@ -2912,17 +2912,17 @@
           const deadlinesSoon = (p.upcomingDeadlines || []).filter(d => d.weeks <= 2);
           const deadlinesMonth = (p.upcomingDeadlines || []).filter(d => d.weeks <= 4);
           const isFlagged = deadlinesSoon.length > 0 && (p.status === 'amber' || p.status === 'red');
-          const dlHTML = deadlinesMonth.map(d => `<div style="font-size:11px;color:${d.weeks <= 2 ? 'var(--rd)' : 'var(--am)'};margin-top:3px;">${d.weeks <= 0 ? 'âš  Overdue' : d.weeks <= 2 ? 'âš  ' + d.l + ' in ' + d.weeks + 'w' : d.l + ' in ' + d.weeks + 'w'}</div>`).join('');
+          const dlHTML = deadlinesMonth.map(d => `<div style="font-size:11px;color:${d.weeks <= 2 ? 'var(--rd)' : 'var(--am)'};margin-top:3px;">${d.weeks <= 0 ? '⚠ Overdue' : d.weeks <= 2 ? '⚠ ' + d.l + ' in ' + d.weeks + 'w' : d.l + ' in ' + d.weeks + 'w'}</div>`).join('');
           const hoursGap = p.hoursLogged - p.hoursProjected;
           const hoursNote = hoursGap > 4 ? `<span class="rv-warn">+${hoursGap}h over</span>` : hoursGap < -4 ? `<span class="rv-flag">${hoursGap}h behind</span>` : `<span class="rv-ok">On track</span>`;
           return `<div class="rv-card" style="${isFlagged ? 'border-color:var(--rd);' : ''}">
         <div class="rv-card-title"><span class="sdlg" style="background:${statusColors[p.status]};"></span>${p.name} ${isFlagged ? '<span class="rv-flag">At risk</span>' : ''}</div>
-        <div class="rv-card-sub">${p.goal || 'No goal set'}${!p.goal ? '' : p.outcome === 'hit' ? ' â€” Hit âœ“' : ''}</div>
+        <div class="rv-card-sub">${p.goal || 'No goal set'}${!p.goal ? '' : p.outcome === 'hit' ? ' — Hit ✓' : ''}</div>
         <div class="rv-row"><span class="rv-lbl">Status trail</span><div class="rv-dots">${trailHTML(p.statusTrail)}</div></div>
         <div class="rv-row"><span class="rv-lbl">Hours so far</span><span class="rv-val">${p.hoursLogged}h</span>${hoursNote}</div>
         ${dlHTML}
-        ${p.celebrate ? `<div style="font-size:11px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-top:7px;">ðŸŽ‰ ${p.celebrate}</div>` : ''}
-        ${p.decision ? `<div style="font-size:11px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-top:5px;">ðŸš© ${p.decision}</div>` : ''}
+        ${p.celebrate ? `<div style="font-size:11px;background:var(--gb);color:var(--gn);padding:5px 8px;border-radius:var(--r);margin-top:7px;">🎉 ${p.celebrate}</div>` : ''}
+        ${p.decision ? `<div style="font-size:11px;background:var(--rb);color:var(--rd);padding:5px 8px;border-radius:var(--r);margin-top:5px;">🚩 ${p.decision}</div>` : ''}
       </div>`;
         }).join('');
         const peopleRows = data.people.map(p => {
@@ -2936,13 +2936,13 @@
           <div class="rv-bar-fill ${isOver ? 'rv-bar-over' : 'rv-bar-ok'}" style="width:${Math.min(allocPct, 100)}%;opacity:.3;"></div>
           <div style="position:absolute;top:0;left:0;height:6px;width:${Math.min(logPct, 100)}%;background:rgba(26,25,22,0.35);border-radius:3px;"></div>
         </div>
-        <span class="rv-val" style="width:100px;text-align:right;">${p.logged}h logged Â· ${p.projected}h alloc</span>
+        <span class="rv-val" style="width:100px;text-align:right;">${p.logged}h logged · ${p.projected}h alloc</span>
         ${flagHTML}
       </div>`;
         }).join('');
         forwardSection = `
       <div class="rv-section">
-        <div class="rv-section-title">This month â€” ${data.label}</div>
+        <div class="rv-section-title">This month — ${data.label}</div>
         <div class="rv-section-sub">Current progress and what's coming up.</div>
         <div class="rv-grid">${projRows}</div>
         <div class="rv-section-title" style="font-size:13px;margin-bottom:10px;">People</div>
@@ -2957,7 +2957,7 @@
         const fwProj = fwData.projects.filter(p => p.upcomingDeadlines && p.upcomingDeadlines.some(d => d.weeks <= 4)).map(p => `<div class="rv-row"><span class="rv-lbl">${p.name}</span><div>${p.upcomingDeadlines.filter(d => d.weeks <= 4).map(d => `<span style="font-size:11px;color:${d.weeks <= 2 ? 'var(--rd)' : 'var(--am)'};">${d.l} (${d.weeks}w)</span>`).join(', ')}</div></div>`).join('');
         forwardSection = `<div class="rv-divider"></div>
       <div class="rv-section">
-        <div class="rv-section-title">Forward look â€” April 2026</div>
+        <div class="rv-section-title">Forward look — April 2026</div>
         <div class="rv-section-sub">Upcoming deadlines and milestones in the next 4 weeks.</div>
         <div class="rv-card">${fwProj || '<div style="font-size:12px;color:var(--fa);">No urgent deadlines in the next 4 weeks.</div>'}</div>
       </div>`;
@@ -2993,7 +2993,7 @@
       const sl = { green: 'On track', amber: 'Needs discussion', red: 'Urgent', gray: 'Dormant' };
       const flash = document.createElement('div');
       flash.style.cssText = 'position:fixed;bottom:24px;right:24px;background:var(--tx);color:#fff;font-size:13px;font-family:\'DM Sans\',sans-serif;padding:10px 18px;border-radius:10px;z-index:999;transition:opacity .4s;';
-      flash.textContent = `${p.name} â†’ ${sl[newStatus]} Â· ${currentEditor}`;
+      flash.textContent = `${p.name} → ${sl[newStatus]} · ${currentEditor}`;
       document.body.appendChild(flash);
       setTimeout(() => { flash.style.opacity = '0'; setTimeout(() => flash.remove(), 400); }, 2000);
     }
@@ -3008,9 +3008,9 @@
       overlay.id = 'ci-lock-overlay';
       overlay.style.cssText = 'position:absolute;inset:0;background:var(--bg);display:flex;align-items:center;justify-content:center;z-index:50;';
       overlay.innerHTML = `<div style="text-align:center;padding:40px 48px;background:var(--sf);border:0.5px solid var(--bm);border-radius:var(--rl);max-width:380px;box-shadow:0 2px 12px rgba(0,0,0,.06);">
-        <div style="font-size:44px;margin-bottom:12px;color:var(--gn);">âœ“</div>
+        <div style="font-size:44px;margin-bottom:12px;color:var(--gn);">✓</div>
         <div style="font-size:17px;font-weight:500;margin-bottom:6px;">Check-in submitted</div>
-        <div style="font-size:13px;color:var(--mu);margin-bottom:6px;">${weekLabel} Â· recorded as <strong>${currentEditor}</strong></div>
+        <div style="font-size:13px;color:var(--mu);margin-bottom:6px;">${weekLabel} · recorded as <strong>${currentEditor}</strong></div>
         <div style="font-size:11px;color:var(--fa);">Your status is updated on the left. See you next week!</div>
       </div>`;
       view.appendChild(overlay);
@@ -3108,7 +3108,7 @@
       if (!currentEditor) { alert('Please select who you are editing as.'); return; }
       const formEl = document.getElementById('form-' + type);
 
-      // â”€â”€ Contributor validation â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+      // ── Contributor validation ────────────────────────────────────────────
       if (type === 'c') {
         // Reset previous highlights
         formEl.querySelector('.ci-err')?.remove();
@@ -3121,7 +3121,7 @@
 
         // Availability
         const avPill = formEl.querySelector('.pill.sel[onclick*="av-c"]');
-        if (!avPill) errs.push('Availability â€” select how open you are');
+        if (!avPill) errs.push('Availability — select how open you are');
 
         // Available hours
         if (!availHEl?.value) {
@@ -3129,7 +3129,7 @@
           errs.push('Available hours');
         }
 
-        // Projects â€” at least one must be selected, and each must be fully filled
+        // Projects — at least one must be selected, and each must be fully filled
         const activePbs = Array.from(formEl.querySelectorAll('#c-projs .pb'))
           .filter(pb => pb.querySelector('select')?.value);
 
@@ -3140,9 +3140,9 @@
             const proj = pb.querySelector('select').value;
             const nums = pb.querySelectorAll('input[type="number"]');
             const ta   = pb.querySelector('textarea');
-            if (!nums[0]?.value) { if (nums[0]) nums[0].style.borderColor = 'var(--rd)'; errs.push(`"${proj}" â€” hours this week`); }
-            if (!nums[1]?.value) { if (nums[1]) nums[1].style.borderColor = 'var(--rd)'; errs.push(`"${proj}" â€” expected hours next week`); }
-            if (!ta?.value.trim()) { if (ta) ta.style.borderColor = 'var(--rd)'; errs.push(`"${proj}" â€” description`); }
+            if (!nums[0]?.value) { if (nums[0]) nums[0].style.borderColor = 'var(--rd)'; errs.push(`"${proj}" — hours this week`); }
+            if (!nums[1]?.value) { if (nums[1]) nums[1].style.borderColor = 'var(--rd)'; errs.push(`"${proj}" — expected hours next week`); }
+            if (!ta?.value.trim()) { if (ta) ta.style.borderColor = 'var(--rd)'; errs.push(`"${proj}" — description`); }
           });
         }
 
@@ -3257,7 +3257,7 @@
       const mEl = document.getElementById('sb-mo-h'); if (mEl) mEl.textContent = mH + 'h';
     }
 
-    // â”€â”€â”€ ADMIN VIEW â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // ─── ADMIN VIEW ──────────────────────────────────────────────────────────
 
     const ACTION_LBL = {
       status_change:     'Status changed',
@@ -3291,7 +3291,7 @@
 
     async function loadChangelog() {
       const el = document.getElementById('adm-changelog');
-      el.innerHTML = '<div style="padding:20px;color:var(--mu);font-size:13px;">Loadingâ€¦</div>';
+      el.innerHTML = '<div style="padding:20px;color:var(--mu);font-size:13px;">Loading…</div>';
       try {
         const rows = await fetch('api/admin/changelog?editor=' + encodeURIComponent(currentEditor)).then(r => r.json());
         if (rows.error) { el.innerHTML = `<div style="padding:20px;color:var(--rd);">${rows.error}</div>`; return; }
@@ -3302,9 +3302,9 @@
           const lbl = ACTION_LBL[r.action] || r.action;
           return `<tr>
             <td style="white-space:nowrap;color:var(--fa);font-family:'DM Mono',monospace;font-size:11px;">${fmt}</td>
-            <td style="white-space:nowrap;">${r.editor ? r.editor.split(' ')[0] : 'â€”'}</td>
+            <td style="white-space:nowrap;">${r.editor ? r.editor.split(' ')[0] : '—'}</td>
             <td><span style="font-size:11px;padding:2px 6px;border-radius:3px;background:var(--bb);color:var(--bl);">${lbl}</span></td>
-            <td style="font-weight:500;">${r.subject || 'â€”'}</td>
+            <td style="font-weight:500;">${r.subject || '—'}</td>
             <td style="color:var(--mu);font-size:12px;">${r.detail || ''}</td>
           </tr>`;
         }).join('');
@@ -3317,7 +3317,7 @@
 
     async function loadSnapshots() {
       const el = document.getElementById('adm-snapshots');
-      el.innerHTML = '<div style="padding:20px;color:var(--mu);font-size:13px;">Loadingâ€¦</div>';
+      el.innerHTML = '<div style="padding:20px;color:var(--mu);font-size:13px;">Loading…</div>';
       try {
         const snaps = await fetch('api/admin/snapshots?editor=' + encodeURIComponent(currentEditor)).then(r => r.json());
         if (snaps.error) { el.innerHTML = `<div style="padding:20px;color:var(--rd);">${snaps.error}</div>`; return; }
@@ -3326,7 +3326,7 @@
         const fmtId   = id => {
           const m = id.match(/^snapshot-(\d{4}-\d{2}-\d{2})T(\d{2})-(\d{2})-(\d{2})(?:-(.+))?\.db$/);
           if (!m) return id;
-          return `${m[1]} ${m[2]}:${m[3]}:${m[4]}${m[5] ? ' â€” ' + m[5].replace(/_/g,' ') : ''}`;
+          return `${m[1]} ${m[2]}:${m[3]}:${m[4]}${m[5] ? ' — ' + m[5].replace(/_/g,' ') : ''}`;
         };
 
         const listHTML = snaps.length ? snaps.map(s => `
@@ -3356,7 +3356,7 @@
     async function createSnapshot() {
       const label = (document.getElementById('snap-label')?.value || '').trim();
       const btn = document.getElementById('snap-save-btn');
-      if (btn) { btn.disabled = true; btn.textContent = 'Savingâ€¦'; }
+      if (btn) { btn.disabled = true; btn.textContent = 'Saving…'; }
       try {
         const data = await fetch('api/admin/snapshots', {
           method: 'POST', headers: { 'Content-Type': 'application/json' },
@@ -3377,7 +3377,7 @@
           body: JSON.stringify({ editor: currentEditor })
         }).then(r => r.json());
         if (data.error) { alert(data.error); return; }
-        flashMsg('Restored â€” reloadingâ€¦');
+        flashMsg('Restored — reloading…');
         setTimeout(() => location.reload(), 1500);
       } catch(e) { alert('Error: ' + e.message); }
     }
@@ -3394,7 +3394,7 @@
       } catch(e) { alert('Error: ' + e.message); }
     }
 
-    // â”€â”€â”€ MANAGER / PERSON / PROJECT MANAGEMENT â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+    // ─── MANAGER / PERSON / PROJECT MANAGEMENT ───────────────────────────────
 
     function _refreshEdsel() {
       const edsel = document.getElementById('edsel');
@@ -3512,7 +3512,7 @@
         PNAMES = PROJECTS.map(p => p.name);
         const now = new Date(); const jan1 = new Date(now.getFullYear(), 0, 1);
         const wk = Math.ceil(((now - jan1) / 864e5 + jan1.getDay() + 1) / 7);
-        document.querySelector('.wkp').textContent = 'Week ' + wk + ' â€” ' + now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
+        document.querySelector('.wkp').textContent = 'Week ' + wk + ' — ' + now.toLocaleDateString('en-GB', { month: 'short', year: 'numeric' });
         const edsel = document.getElementById('edsel');
         edsel.innerHTML = '<option value="">Select...</option>' + PEOPLE.filter(p => !p.inactive).map(p => `<option>${p.name}</option>`).join('');
         updateStatusCounts();
