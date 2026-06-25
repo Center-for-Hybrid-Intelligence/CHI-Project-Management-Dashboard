@@ -1,5 +1,6 @@
 services:
   proj-mgt-dashboard:
+    container_name: proj-mgt-dashboard
     build: .
     ports:
       - "${PORT:-5020}:${PORT:-5020}"
@@ -15,3 +16,10 @@ services:
       - NODE_ENV=production
       - PORT=${PORT:-5020}
       - BASE_PATH=${BASE_PATH:-/project-management-dashboard}
+    networks:
+      - default
+      - caddy
+
+networks:
+  caddy:
+    external: true
