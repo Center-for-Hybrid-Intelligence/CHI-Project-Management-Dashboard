@@ -2,6 +2,8 @@
 
 Internal project/people dashboard for the CHI team. Built with Express + SQLite (better-sqlite3).
 
+> **Continuing this project?** See [ARCHITECTURE.md](ARCHITECTURE.md) for the data model, API reference, frontend internals, and known limitations — this README only covers running and hosting.
+
 ---
 
 ## Running locally (no Docker)
