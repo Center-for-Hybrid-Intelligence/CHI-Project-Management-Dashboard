@@ -1,3 +1,11 @@
+# CHI Project Management Dashboard
+
+Internal project/people dashboard for the CHI team. Built with Express + SQLite (better-sqlite3).
+
+> **Continuing this project?** See [ARCHITECTURE.md](ARCHITECTURE.md) for the data model, API reference, frontend internals, and known limitations — this README only covers running and hosting.
+
+---
+
 # USEFUL LINKS :
 - VM path : docker-projects/CHI-Quantum-Workflow-Assistant/CHI-Quantum-HR-Workflow-Assistant/
 - github repo : https://github.com/Center-for-Hybrid-Intelligence/CHI-Quantum-HR-Workflow-Assistant
@@ -24,15 +32,6 @@
     
     
 ------------------------------------
-    
-
-# CHI Project Management Dashboard
-
-Internal project/people dashboard for the CHI team. Built with Express + SQLite (better-sqlite3).
-
-> **Continuing this project?** See [ARCHITECTURE.md](ARCHITECTURE.md) for the data model, API reference, frontend internals, and known limitations — this README only covers running and hosting.
-
----
 
 ## Environment variables
 
