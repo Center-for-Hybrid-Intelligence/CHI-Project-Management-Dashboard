@@ -1,3 +1,31 @@
+# USEFUL LINKS :
+- VM path : docker-projects/CHI-Quantum-Workflow-Assistant/CHI-Quantum-HR-Workflow-Assistant/
+- github repo : https://github.com/Center-for-Hybrid-Intelligence/CHI-Quantum-HR-Workflow-Assistant
+- URL : https://staging.hybridintelligence.eu/quantum-workflow-assistant/
+- Localhost URL : http://localhost:5010/home.html
+
+
+# LOCALHOST :
+
+- First time : Clone the repo with git clone https://github.com/Center-for-Hybrid-Intelligence/CHI-Project-Management-Dashboard.git
+- Open Docker
+- Open a terminal in the CHI-Project-Management-Dashboard folder
+- run "docker compose up -d --build"
+- Go to http://localhost:5020
+
+
+# VM hosting / updating :
+
+- Connect to the staging VM
+- Go to docker-projects/Proj-Mgt-Dashboard/CHI-Project-Management-Dashboard/
+- "git pull" if you made changes
+- run "docker compose up -d --build"
+- Go to https://staging.hybridintelligence.eu/project-management-dashboard/
+    
+    
+------------------------------------
+    
+
 # CHI Project Management Dashboard
 
 Internal project/people dashboard for the CHI team. Built with Express + SQLite (better-sqlite3).
